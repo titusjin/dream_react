@@ -1,8 +1,8 @@
 {
-  "name": "CindyExerciseAn9",
+  "name": "dreamFE",
   "version": "0.0.1",
-  "description": "cindy exercise an9: try to create new index page.",
-  "repository": "https://github.com/facebook/flux",
+  "description": "Dream project with reactJS FE part",
+  "repository": "https://github.com/titusjin/dream_react.git",
   "main": "js/app.js",
   "dependencies": {
     "flux": "^2.0.1",
