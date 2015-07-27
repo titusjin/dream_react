@@ -23,7 +23,7 @@ module.exports = {
       // and make it as data-url embeded into ur page
       // For better understanding of the url-loader, visit the official site: https://github.com/webpack/url-loader
       // {test: /\.jpg$/, loader: "url-loader?limit=8192"},
-      {test: /\.(png|jpg)$/, loader: "file"},
+      {test: /\.(png|jpg)$/, loader: "file?name=images/[hash].[ext]"},
     ]
   },
   resolve: {
