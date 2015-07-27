@@ -3,16 +3,14 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 module.exports = {
   entry: {
-    IndexBundle : './src/IndexPage/IndexApp.js',
-    HeaderBundle : './src/HeaderPage/HeaderApp.js',
-    FooterBundle : './src/FooterPage/FooterApp.js'
+    IndexBundle : './src/components/IndexPage/IndexApp'
   },
   output: {
   	path: './out',
     filename: '[name].js'  
   },
   module: {
-  	loaders: [[
+  	loaders: [
       // To transfer jsx into pure js, we can use jsx-loader or babel-loader
       // {test: /\.js$/ , loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
       {test: /\.js$/, loader: 'babel-loader'},
@@ -22,18 +20,15 @@ module.exports = {
       {test: /\.css$/, loader: 'style-loader!css-loader'},
 
       // url-loader will taking care of the png/jpg...etc files inside ur css file
+      // and make it as data-url embeded into ur page
       // For better understanding of the url-loader, visit the official site: https://github.com/webpack/url-loader
-      {test: /\.png$/, loader: "url-loader"}
-    ]]
+      // {test: /\.jpg$/, loader: "url-loader?limit=8192"},
+      {test: /\.(png|jpg)$/, loader: "file"},
+    ]
   },
   resolve: {
     // you can now require('fileName') instead of require('file.coffee') or require('file.js')...etc.
     extensions: ['', '.js', '.json', '.coffee'] 
-  },
-  externals: {
-      //don't bundle the 'react' npm package with our bundle.js
-      //but get it from a global 'React' variable
-      'react': 'React'
   },
   plugins: [commonsPlugin]
 };

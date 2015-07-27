@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Dream project with reactJS FE part",
   "repository": "https://github.com/titusjin/dream_react.git",
-  "main": "js/app.js",
   "dependencies": {
     "flux": "^2.0.1",
     "keymirror": "~0.1.0",
@@ -30,7 +29,7 @@
     "buildp": "webpack -p",
     "test": "jest"
   },
-  "author": "104",
+  "author": "104 Corporation",
   "jest": {
     "rootDir": "./js"
   }

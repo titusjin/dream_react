@@ -5,7 +5,6 @@
 
 var React = require('react');
 
-
 var DreamRules = React.createClass({
 	getInitialState: function() {
         return {};

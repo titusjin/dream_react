@@ -4,8 +4,7 @@
 
 var React = require('react');
 
-
-var Footer = React.createClass({
+var UniversalFooter = React.createClass({
     getInitialState: function() {
         return {};
     },
@@ -24,16 +23,16 @@ var Footer = React.createClass({
 
     render: function() {
         return (
-            <div className={"fa-com"}>
-                <div className={"area-btn"}>
+            <div className="fa-com">
+                <div className="area-btn">
                     <a href="#">關於我們</a>
                     <a href="#">使用條款</a>
                     <a href="#">常見問答</a>
                     <a href="#">聯絡我們</a>
-                    <span className={"lang"}>
+                    <span className="lang">
                         LANGUAGE
-                        <a href="#" className={"in-lang"}>
-                            繁中<em className={"icon-arrIn"}></em>
+                        <a href="#" className="in-lang">
+                            繁中<em className="icon-arrIn"></em>
                             <ul>
                                 <li>繁中</li>
                                 <li>簡中</li>
@@ -42,8 +41,8 @@ var Footer = React.createClass({
                         </a>
                     </span>
                 </div>
-                <div className={"copyright"}>
-                    <a href="#"><em className={"icon-fb"}></em>夢想搖籃</a>
+                <div className="copyright">
+                    <a href="#"><em className="icon-fb"></em>夢想搖籃</a>
                     <span>© 2015 104 Coporation All Rights Reserved.</span>
                 </div>
             </div>
@@ -51,4 +50,4 @@ var Footer = React.createClass({
     }
 });
 
-module.exports = Footer;
+module.exports = UniversalFooter;

@@ -18,34 +18,29 @@ function getGridContentState() {
 
 var GridContent = React.createClass({
 	getInitialState: function() {
-        return getGridContentState();
-  	},
+    return getGridContentState();
+  },
 	
 	componentDidMount: function() {
-    	IndexGridStore.addChangeGridListener(this._onChange);
-  	},
+   	IndexGridStore.addChangeGridListener(this._onChange);
+  },
 
-  	componentWillUnmount: function() {
-    	IndexGridStore.removeChangeGridListener(this._onChange);
-  	},
+  componentWillUnmount: function() {
+   	IndexGridStore.removeChangeGridListener(this._onChange);
+  },
 	
 	_onChange: function() {
-    	this.setState(getGridContentState());
-  	},
+   	this.setState(getGridContentState());
+  },
 
-  	render: function() {
-    	return (
-      		<div id="dreamContent" className={"fa-com"}>
-        		<GridMenu />
-        		<GridWall data={this.state.data} />
-      		</div>
-    	);
-  	}
+  render: function() {
+   	return (
+     	<div id="dreamContent" className={"fa-com"}>
+      	<GridMenu />
+      	<GridWall data={this.state.data} />
+     	</div>
+   	);
+  }
 });
 
 module.exports = GridContent;
-
-
-
-
-
