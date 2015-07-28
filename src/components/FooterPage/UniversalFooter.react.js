@@ -42,7 +42,7 @@ var UniversalFooter = React.createClass({
                         </span>
                     </div>
                     <div className="copyright">
-                        <a href="#"><em className="icon-fb"></em>夢想搖籃</a>
+                        <a href="#"><em className="icon-fb">夢想搖籃</em></a>
                         <span>© 2015 104 Coporation All Rights Reserved.</span>
                     </div>
                 </div>

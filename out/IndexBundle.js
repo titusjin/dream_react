@@ -11,9 +11,9 @@ webpackJsonp([0,1],[
 	var React = __webpack_require__(1);
 	var IndexPageContainer = __webpack_require__(157);
 
-	__webpack_require__(163);
+	__webpack_require__(166);
 	//require('../css/iconfont.css');
-	__webpack_require__(173);
+	__webpack_require__(176);
 
 	React.render(React.createElement(IndexPageContainer, null), document.getElementsByTagName('body')[0]);
 
@@ -18438,8 +18438,11 @@ webpackJsonp([0,1],[
 	                    React.createElement(
 	                        "a",
 	                        { href: "#" },
-	                        React.createElement("em", { className: "icon-fb" }),
-	                        "夢想搖籃"
+	                        React.createElement(
+	                            "em",
+	                            { className: "icon-fb" },
+	                            "夢想搖籃"
+	                        )
 	                    ),
 	                    React.createElement(
 	                        "span",
@@ -18536,7 +18539,7 @@ webpackJsonp([0,1],[
 	var React = __webpack_require__(1);
 
 	var CpmainBanner = __webpack_require__(162);
-	var FaCom = __webpack_require__(162);
+	var FaCom = __webpack_require__(163);
 
 	var FaContent = React.createClass({
 	  displayName: 'FaContent',
@@ -18592,41 +18595,45 @@ webpackJsonp([0,1],[
 		render: function render() {
 			return React.createElement(
 				"div",
-				{ className: "fa-com" },
+				{ className: "cp-mainBanner" },
 				React.createElement(
-					"article",
-					null,
+					"div",
+					{ className: "fa-com" },
 					React.createElement(
-						"h1",
+						"article",
 						null,
-						"夢想公投"
-					),
-					React.createElement(
-						"p",
-						null,
-						"新創點子需要你的支持才能進行募集，你可以投他們一票，或提供實質的建議！"
-					),
-					React.createElement(
-						"p",
-						{ className: "area-btn" },
 						React.createElement(
-							"a",
-							{ className: "btn-yel", href: "#" },
-							"投票支持"
+							"h1",
+							null,
+							"夢想\"公投\""
+						),
+						React.createElement(
+							"p",
+							null,
+							"新創點子需要你的支持才能進行募集，你可以投他們一票，或提供實質的建議！"
+						),
+						React.createElement(
+							"p",
+							{ className: "area-btn" },
+							React.createElement(
+								"a",
+								{ className: "btn-yel", href: "#" },
+								"投票支持"
+							)
+						),
+						React.createElement(
+							"p",
+							{ className: "area-page" },
+							React.createElement("a", { href: "#", className: "current" }),
+							React.createElement("a", { href: "#" }),
+							React.createElement("a", { href: "#" })
 						)
 					),
 					React.createElement(
-						"p",
-						{ className: "area-page" },
-						React.createElement("a", { href: "#", className: "current" }),
-						React.createElement("a", { href: "#" }),
-						React.createElement("a", { href: "#" })
+						"div",
+						{ className: "photo" },
+						React.createElement("img", { src: "../img/fake/mainBanner_01.jpg" })
 					)
-				),
-				React.createElement(
-					"div",
-					{ className: "photo" },
-					React.createElement("img", { src: "../img/fake/mainBanner_01.jpg" })
 				)
 			);
 		}
@@ -18638,13 +18645,631 @@ webpackJsonp([0,1],[
 /* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+		Dream rules componenet
+	*/
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var CpMenuCategory = __webpack_require__(164);
+	var CpDreamWall = __webpack_require__(165);
+
+	var FaCom = React.createClass({
+	  displayName: 'FaCom',
+
+	  getInitialState: function getInitialState() {
+	    return {};
+	  },
+
+	  componentDidMount: function componentDidMount() {},
+
+	  componentWillUnmount: function componentWillUnmount() {},
+
+	  _onChange: function _onChange() {
+	    //this.setState(getGridContentState());
+	  },
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: "fa-content" },
+	      React.createElement(CpMenuCategory, null),
+	      React.createElement(CpDreamWall, null)
+	    );
+	  }
+	});
+
+	module.exports = FaCom;
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var CpMenuCategory = React.createClass({
+		displayName: "CpMenuCategory",
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				{ className: "cp-menu-category" },
+				React.createElement(
+					"a",
+					{ href: "#", className: "in-lang" },
+					"類別",
+					React.createElement("em", { className: "icon-arrIn" }),
+					React.createElement(
+						"ul",
+						null,
+						React.createElement(
+							"li",
+							null,
+							"出版"
+						),
+						React.createElement(
+							"li",
+							null,
+							"影音"
+						),
+						React.createElement(
+							"li",
+							null,
+							"設計"
+						),
+						React.createElement(
+							"li",
+							null,
+							"科技"
+						),
+						React.createElement(
+							"li",
+							null,
+							"生活"
+						),
+						React.createElement(
+							"li",
+							null,
+							"體育"
+						),
+						React.createElement(
+							"li",
+							null,
+							"社會"
+						),
+						React.createElement(
+							"li",
+							null,
+							"藝文"
+						),
+						React.createElement(
+							"li",
+							null,
+							"其它"
+						)
+					)
+				),
+				React.createElement(
+					"div",
+					{ className: "area-btn" },
+					React.createElement(
+						"a",
+						{ href: "#" },
+						"即將到期"
+					),
+					React.createElement(
+						"span",
+						null,
+						"|"
+					),
+					React.createElement(
+						"a",
+						{ href: "#", className: "current" },
+						"最新"
+					),
+					React.createElement(
+						"span",
+						null,
+						"|"
+					),
+					React.createElement(
+						"a",
+						{ href: "#" },
+						"熱門"
+					),
+					React.createElement(
+						"span",
+						null,
+						"|"
+					),
+					React.createElement(
+						"a",
+						{ href: "#" },
+						"已結束"
+					)
+				)
+			);
+		}
+	});
+
+	module.exports = CpMenuCategory;
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var CpDreamWall = React.createClass({
+	    displayName: "CpDreamWall",
+
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            { className: "cp-dreamWall" },
+	            React.createElement(
+	                "div",
+	                { className: "post po-vote" },
+	                React.createElement(
+	                    "a",
+	                    { href: "#", className: "photo" },
+	                    React.createElement("img", { src: "../img/fake/ill_320x245_04.jpg" })
+	                ),
+	                React.createElement(
+	                    "article",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "#", className: "tit" },
+	                        "NCCU HACKAHON生活創客！共創生活價值！"
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        React.createElement(
+	                            "span",
+	                            { className: "sort" },
+	                            React.createElement("em", { className: "icon-label" }),
+	                            "生活"
+	                        ),
+	                        React.createElement(
+	                            "span",
+	                            { className: "time" },
+	                            React.createElement("em", { className: "icon-time" }),
+	                            "到數7天"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "#", className: "mess" },
+	                            React.createElement("em", { className: "icon-message" }),
+	                            "26"
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "count" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "vote" },
+	                        React.createElement(
+	                            "div",
+	                            { id: "myStat1", "data-dimension": "99", "data-text": "89", "data-info": "票", "data-width": "3", "data-fontsize": "15", "data-percent": "89", "data-fgcolor": "#f9a825", "data-bgcolor": "#eaeaea", className: "circliful", style: { width: 99 } },
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-text" },
+	                                "89"
+	                            ),
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-info-half" },
+	                                "票"
+	                            ),
+	                            React.createElement("canvas", { width: "99", height: "99" })
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "btn" },
+	                        React.createElement(
+	                            "a",
+	                            { className: "btn-yel close", href: "#" },
+	                            "投票支持"
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "post po-vote" },
+	                React.createElement(
+	                    "a",
+	                    { href: "#", className: "photo" },
+	                    React.createElement("img", { src: "../img/fake/ill_320x245_02.jpg" })
+	                ),
+	                React.createElement(
+	                    "article",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "#", className: "tit" },
+	                        "幸好有你，金多蝦：來自宜蘭的生態復育無毒蝦"
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        React.createElement(
+	                            "span",
+	                            { className: "sort" },
+	                            React.createElement("em", { className: "icon-label" }),
+	                            "生活"
+	                        ),
+	                        React.createElement(
+	                            "span",
+	                            { className: "time" },
+	                            React.createElement("em", { className: "icon-time" }),
+	                            "到數7天"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "#", className: "mess" },
+	                            React.createElement("em", { className: "icon-message" }),
+	                            "26"
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "count" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "vote" },
+	                        React.createElement(
+	                            "div",
+	                            { id: "myStat2", "data-dimension": "99", "data-text": "50", "data-info": "票", "data-width": "3", "data-fontsize": "15", "data-percent": "50", "data-fgcolor": "#f9a825", "data-bgcolor": "#eaeaea", className: "circliful", style: { width: 99 } },
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-text" },
+	                                "50"
+	                            ),
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-info-half" },
+	                                "票"
+	                            ),
+	                            React.createElement("canvas", { width: "99", height: "99" })
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "btn" },
+	                        React.createElement(
+	                            "a",
+	                            { className: "btn-yel", href: "#" },
+	                            "投票支持"
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "post po-vote" },
+	                React.createElement(
+	                    "a",
+	                    { href: "#", className: "photo" },
+	                    React.createElement("img", { src: "../img/fake/ill_320x245_05.jpg" })
+	                ),
+	                React.createElement(
+	                    "article",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "#", className: "tit" },
+	                        "Eye RUN視障體驗大進擊，幫盲身障者自主生活與工作"
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        React.createElement(
+	                            "span",
+	                            { className: "sort" },
+	                            React.createElement("em", { className: "icon-label" }),
+	                            "生活"
+	                        ),
+	                        React.createElement(
+	                            "span",
+	                            { className: "time" },
+	                            React.createElement("em", { className: "icon-time" }),
+	                            "到數7天"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "#", className: "mess" },
+	                            React.createElement("em", { className: "icon-message" }),
+	                            "26"
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "count" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "vote" },
+	                        React.createElement(
+	                            "div",
+	                            { id: "myStat3", "data-dimension": "99", "data-text": "88", "data-info": "票", "data-width": "3", "data-fontsize": "15", "data-percent": "88", "data-fgcolor": "#f9a825", "data-bgcolor": "#eaeaea", className: "circliful", style: { width: 99 } },
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-text" },
+	                                "88"
+	                            ),
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-info-half" },
+	                                "票"
+	                            ),
+	                            React.createElement("canvas", { width: "99", height: "99" })
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "btn" },
+	                        React.createElement(
+	                            "a",
+	                            { className: "btn-yel", href: "#" },
+	                            "投票支持"
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "post po-vote" },
+	                React.createElement(
+	                    "a",
+	                    { href: "#", className: "photo" },
+	                    React.createElement("img", { src: "../img/fake/ill_320x245_01.jpg" })
+	                ),
+	                React.createElement(
+	                    "article",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "#", className: "tit" },
+	                        "NCCU HACKAHON生活創客！共創生活價值！"
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        React.createElement(
+	                            "span",
+	                            { className: "sort" },
+	                            React.createElement("em", { className: "icon-label" }),
+	                            "生活"
+	                        ),
+	                        React.createElement(
+	                            "span",
+	                            { className: "time" },
+	                            React.createElement("em", { className: "icon-time" }),
+	                            "到數7天"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "#", className: "mess" },
+	                            React.createElement("em", { className: "icon-message" }),
+	                            "26"
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "count" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "vote" },
+	                        React.createElement(
+	                            "div",
+	                            { id: "myStat4", "data-dimension": "99", "data-text": "88", "data-info": "票", "data-width": "3", "data-fontsize": "15", "data-percent": "88", "data-fgcolor": "#f9a825", "data-bgcolor": "#eaeaea", className: "circliful", style: { width: 99 } },
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-text" },
+	                                "88"
+	                            ),
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-info-half" },
+	                                "票"
+	                            ),
+	                            React.createElement("canvas", { width: "99", height: "99" })
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "btn" },
+	                        React.createElement(
+	                            "a",
+	                            { className: "btn-yel", href: "#" },
+	                            "投票支持"
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "post po-vote" },
+	                React.createElement(
+	                    "a",
+	                    { href: "#", className: "photo" },
+	                    React.createElement("img", { src: "../img/fake/ill_320x245_02.jpg" })
+	                ),
+	                React.createElement(
+	                    "article",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "#", className: "tit" },
+	                        "幸好有你，金多蝦：來自宜蘭的生態復育無毒蝦"
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        React.createElement(
+	                            "span",
+	                            { className: "sort" },
+	                            React.createElement("em", { className: "icon-label" }),
+	                            "生活"
+	                        ),
+	                        React.createElement(
+	                            "span",
+	                            { className: "time" },
+	                            React.createElement("em", { className: "icon-time" }),
+	                            "到數7天"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "#", className: "mess" },
+	                            React.createElement("em", { className: "icon-message" }),
+	                            "26"
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "count" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "vote" },
+	                        React.createElement(
+	                            "div",
+	                            { id: "myStat5", "data-dimension": "99", "data-text": "88", "data-info": "票", "data-width": "3", "data-fontsize": "15", "data-percent": "88", "data-fgcolor": "#f9a825", "data-bgcolor": "#eaeaea", className: "circliful", style: { width: 99 } },
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-text" },
+	                                "88"
+	                            ),
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-info-half" },
+	                                "票"
+	                            ),
+	                            React.createElement("canvas", { width: "99", height: "99" })
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "btn" },
+	                        React.createElement(
+	                            "a",
+	                            { className: "btn-yel", href: "#" },
+	                            "投票支持"
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "post po-vote" },
+	                React.createElement(
+	                    "a",
+	                    { href: "#", className: "photo" },
+	                    React.createElement("img", { src: "../img/fake/ill_320x245_03.jpg" })
+	                ),
+	                React.createElement(
+	                    "article",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "#", className: "tit" },
+	                        "Eye RUN視障體驗大進擊，幫盲身障者自主生活與工作"
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        React.createElement(
+	                            "span",
+	                            { className: "sort" },
+	                            React.createElement("em", { className: "icon-label" }),
+	                            "生活"
+	                        ),
+	                        React.createElement(
+	                            "span",
+	                            { className: "time" },
+	                            React.createElement("em", { className: "icon-time" }),
+	                            "到數7天"
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "#", className: "mess" },
+	                            React.createElement("em", { className: "icon-message" }),
+	                            "26"
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "count" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "vote" },
+	                        React.createElement(
+	                            "div",
+	                            { id: "myStat6", "data-dimension": "99", "data-text": "88", "data-info": "票", "data-width": "3", "data-fontsize": "15", "data-percent": "88", "data-fgcolor": "#f9a825", "data-bgcolor": "#eaeaea", className: "circliful", style: { width: 99 } },
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-text" },
+	                                "88"
+	                            ),
+	                            React.createElement(
+	                                "span",
+	                                { className: "circle-info-half" },
+	                                "票"
+	                            ),
+	                            React.createElement("canvas", { width: "99", height: "99" })
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "btn" },
+	                        React.createElement(
+	                            "a",
+	                            { className: "btn-yel", href: "#" },
+	                            "投票支持"
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "area-btn" },
+	                React.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    "更多夢想"
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = CpDreamWall;
+
+/***/ },
+/* 166 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(164);
+	var content = __webpack_require__(167);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(172)(content, {});
+	var update = __webpack_require__(175)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -18661,21 +19286,21 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 164 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(165)();
+	exports = module.exports = __webpack_require__(168)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\r\n/*@import url(\"../css/iconfont.css\");\r\n*//* http://meyerweb.com/eric/tools/css/reset/ \r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\r\n/* line 17, ../scss/common/_reset.scss */\r\nhtml, body, div, span, applet, object, iframe,\r\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\r\na, abbr, acronym, address, big, cite, code,\r\ndel, dfn, em, img, ins, kbd, q, s, samp,\r\nsmall, strike, strong, sub, sup, tt, var,\r\nb, u, i, center,\r\ndl, dt, dd, ol, ul, li,\r\nfieldset, form, label, legend,\r\ntable, caption, tbody, tfoot, thead, tr, th, td,\r\narticle, aside, canvas, details, embed,\r\nfigure, figcaption, footer, header, hgroup,\r\nmenu, nav, output, ruby, section, summary,\r\ntime, mark, audio, video {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: 0;\r\n  /*font-size: 100%;*/\r\n  font: inherit;\r\n  vertical-align: baseline;\r\n}\r\n\r\n/* HTML5 display-role reset for older browsers */\r\n/* line 27, ../scss/common/_reset.scss */\r\narticle, aside, details, figcaption, figure,\r\nfooter, header, hgroup, menu, nav, section {\r\n  display: block;\r\n}\r\n\r\n/* line 31, ../scss/common/_reset.scss */\r\nbody {\r\n  line-height: 1;\r\n}\r\n\r\n/* line 35, ../scss/common/_reset.scss */\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\n/* line 39, ../scss/common/_reset.scss */\r\nol, ul {\r\n  list-style: none;\r\n}\r\n\r\n/* line 43, ../scss/common/_reset.scss */\r\nblockquote, q {\r\n  quotes: none;\r\n}\r\n\r\n/* line 48, ../scss/common/_reset.scss */\r\nblockquote:before, blockquote:after,\r\nq:before, q:after {\r\n  content: '';\r\n  content: none;\r\n}\r\n\r\n/* line 53, ../scss/common/_reset.scss */\r\ntable {\r\n  border-collapse: collapse;\r\n  border-spacing: 0;\r\n}\r\n\r\n/* line 58, ../scss/common/_reset.scss */\r\ndt {\r\n  clear: left;\r\n}\r\n\r\n/* line 62, ../scss/common/_reset.scss */\r\ninput, button, select, textarea {\r\n  outline: none;\r\n}\r\n\r\n/* line 1, ../scss/common/_frame.scss */\r\nhtml, body {\r\n  /* 字型設定 */\r\n  color: #6b7177;\r\n  font-family: Arial,\"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", Verdana, Tahoma, \"\\65B0\\7D30\\660E\\9AD4\";\r\n  font-size: 13px;\r\n  line-height: 1.4em;\r\n  -webkit-text-size-adjust: none;\r\n  /* 解除瀏覽器最小字型設定 */\r\n}\r\n\r\n/* line 10, ../scss/common/_frame.scss */\r\ninput, select, textarea {\r\n  font-family: Arial,\"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", Verdana, Tahoma, \"\\65B0\\7D30\\660E\\9AD4\";\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n}\r\n\r\n/* line 17, ../scss/common/_frame.scss */\r\nheader .logo, header nav, header .search input, .cp-mainBanner article, .cp-dreamWall .post .new, .cp-dreamWall .post .count .vote, .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies, .cp-explain, .cp-explain a em {\r\n  -webkit-box-sizing: border-box;\r\n  -moz-box-sizing: border-box;\r\n  box-sizing: border-box;\r\n}\r\n\r\n/* line 23, ../scss/common/_frame.scss */\r\n.fa-com {\r\n  width: 970px;\r\n  height: 100%;\r\n  margin: 0 auto;\r\n}\r\n\r\n/* line 29, ../scss/common/_frame.scss */\r\n.fa-theme {\r\n  width: 100%;\r\n  padding: .9rem 0;\r\n  margin-bottom: .9rem;\r\n  float: left;\r\n  background: #ffffff;\r\n  box-shadow: 0em 0.3em 0.4em rgba(51, 51, 102, 0.1);\r\n}\r\n\r\n/* line 2, ../scss/common/_buttons.scss */\r\n.btn-yel {\r\n  background: #ffb300;\r\n  padding: 0 1.5rem;\r\n  display: inline-block;\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n  color: #ffffff;\r\n  text-align: center;\r\n}\r\n\r\n/* line 13, ../scss/common/_buttons.scss */\r\n.btn-yel:hover {\r\n  background: #f29c12;\r\n}\r\n\r\n/* line 2, ../scss/common/_form.scss */\r\n.cp-tit {\r\n  color: #000000;\r\n  font-weight: bold;\r\n  text-align: center;\r\n}\r\n\r\n/* line 8, ../scss/common/_form.scss */\r\n.in-lang {\r\n  color: #8b8b8b;\r\n  border: 1px solid #d6d6d6;\r\n  width: 5.6rem;\r\n  padding: .5rem .8rem;\r\n  line-height: 1rem;\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n  position: relative;\r\n  float: left;\r\n}\r\n/* line 20, ../scss/common/_form.scss */\r\n.in-lang .icon-arrIn {\r\n  position: absolute;\r\n  right: .4rem;\r\n  top: .6rem;\r\n  font-size: .8rem;\r\n}\r\n/* line 27, ../scss/common/_form.scss */\r\n.in-lang ul {\r\n  display: none;\r\n  position: absolute;\r\n  top: 2rem;\r\n  right: -1px;\r\n  text-align: center;\r\n  width: 100%;\r\n  background: #ffffff;\r\n  line-height: 1.8rem;\r\n  filter: alpha(opacity=95);\r\n  -moz-opacity: 0.95;\r\n  opacity: 0.95;\r\n  border: 1px solid #d6d6d6;\r\n  z-index: 10;\r\n}\r\n/* line 42, ../scss/common/_form.scss */\r\n.in-lang ul li {\r\n  color: #000000;\r\n  font-size: 1.1rem;\r\n  padding: .1rem .8rem;\r\n}\r\n/* line 47, ../scss/common/_form.scss */\r\n.in-lang ul li:hover {\r\n  background: #d6d6d6;\r\n}\r\n\r\n/* line 52, ../scss/common/_form.scss */\r\n.in-lang:hover {\r\n  color: #666666;\r\n  border: 1px solid #aaaaaa;\r\n}\r\n/* line 56, ../scss/common/_form.scss */\r\n.in-lang:hover ul {\r\n  display: block;\r\n  border: 1px solid #aaaaaa;\r\n}\r\n\r\n/* line 4, ../scss/common/_header.scss */\r\nheader {\r\n  height: 5.2rem;\r\n  width: 100%;\r\n  border-bottom: 1px solid #eaeaea;\r\n  position: fixed;\r\n  background: #ffffff;\r\n  z-index: 100;\r\n}\r\n/* line 12, ../scss/common/_header.scss */\r\nheader .logo {\r\n  padding: 1rem 0;\r\n  height: 100%;\r\n  float: left;\r\n  margin-right: 3.4rem;\r\n}\r\n/* line 19, ../scss/common/_header.scss */\r\nheader .logo img {\r\n  height: 100%;\r\n  width: auto;\r\n  border: 0;\r\n}\r\n/* line 26, ../scss/common/_header.scss */\r\nheader nav {\r\n  height: 100%;\r\n  float: left;\r\n  position: relative;\r\n  padding-top: .7rem;\r\n}\r\n/* line 33, ../scss/common/_header.scss */\r\nheader nav a {\r\n  font-size: 1.3rem;\r\n  font-weight: bold;\r\n  line-height: 4.5rem;\r\n  height: 100%;\r\n  padding: 0 1.3rem;\r\n  display: block;\r\n  float: left;\r\n  bottom: 0px;\r\n  position: relative;\r\n  color: #8b8b8b;\r\n  background: transparent;\r\n  border-top: 1px solid #ffffff;\r\n  border-left: 0 solid #eaeaea;\r\n  border-right: 0 solid #eaeaea;\r\n  -moz-border-radius: 6px 6px 0 0;\r\n  -webkit-border-radius: 6px 6px 0 0;\r\n  border-radius: 6px 6px 0 0;\r\n}\r\n/* line 52, ../scss/common/_header.scss */\r\nheader nav a .btnLeft, header nav a .btnRight {\r\n  background: white url(" + __webpack_require__(166) + ");\r\n  position: absolute;\r\n  left: -6px;\r\n  bottom: 0px;\r\n  display: none;\r\n  width: 7px;\r\n  height: 6px;\r\n}\r\n/* line 61, ../scss/common/_header.scss */\r\nheader nav a .btnRight {\r\n  background: white url(" + __webpack_require__(167) + ");\r\n  left: auto;\r\n  right: -6px;\r\n}\r\n/* line 68, ../scss/common/_header.scss */\r\nheader nav a:hover {\r\n  color: #000000;\r\n}\r\n/* line 72, ../scss/common/_header.scss */\r\nheader nav .current {\r\n  color: #000000;\r\n  background: #ffffff;\r\n  border-top: 1px solid #eaeaea;\r\n  border-left: 1px solid #eaeaea;\r\n  border-right: 1px solid #eaeaea;\r\n}\r\n/* line 79, ../scss/common/_header.scss */\r\nheader nav .current .btnLeft, header nav .current .btnRight {\r\n  display: block;\r\n}\r\n/* line 84, ../scss/common/_header.scss */\r\nheader nav .icon-arrLa {\r\n  font-size: 1.5rem;\r\n  line-height: 4.5rem;\r\n  display: block;\r\n  color: silver;\r\n  margin: 0 .5rem;\r\n  float: left;\r\n  position: relative;\r\n}\r\n/* line 95, ../scss/common/_header.scss */\r\nheader .navSelf {\r\n  float: right;\r\n  color: #969696;\r\n  font-size: 1.2rem;\r\n  line-height: 2.2rem;\r\n  padding: 1.5rem 0;\r\n}\r\n/* line 102, ../scss/common/_header.scss */\r\nheader .navSelf li {\r\n  height: 100%;\r\n  float: right;\r\n  margin: 0 .4rem;\r\n}\r\n/* line 108, ../scss/common/_header.scss */\r\nheader .navSelf .login {\r\n  color: #969696;\r\n  margin: 0 0 0 1.5rem;\r\n}\r\n/* line 112, ../scss/common/_header.scss */\r\nheader .navSelf .login a {\r\n  margin: 0 .5rem;\r\n  color: #969696;\r\n  float: left;\r\n}\r\n/* line 117, ../scss/common/_header.scss */\r\nheader .navSelf .login a:hover {\r\n  margin: 0 .5rem;\r\n  color: #000000;\r\n}\r\n/* line 121, ../scss/common/_header.scss */\r\nheader .navSelf .login .icon-notice, header .navSelf .login .icon-notice:hover {\r\n  font-size: 1.5rem;\r\n  top: .3rem;\r\n  margin: 0 .7rem 0 .5rem;\r\n  position: relative;\r\n}\r\n/* line 127, ../scss/common/_header.scss */\r\nheader .navSelf .login .icon-notice em, header .navSelf .login .icon-notice:hover em {\r\n  -moz-border-radius: 50%;\r\n  -webkit-border-radius: 50%;\r\n  border-radius: 50%;\r\n  background: #ff1744;\r\n  font-size: 11px;\r\n  line-height: 11px;\r\n  min-width: 11px;\r\n  text-align: center;\r\n  position: absolute;\r\n  top: -.5rem;\r\n  right: -.5rem;\r\n  display: block;\r\n  padding: 3px;\r\n  color: #ffffff;\r\n}\r\n/* line 144, ../scss/common/_header.scss */\r\nheader .navSelf .login span {\r\n  float: left;\r\n  line-height: 2rem;\r\n}\r\n/* line 148, ../scss/common/_header.scss */\r\nheader .navSelf .login .self, header .navSelf .login .self:hover {\r\n  width: 3rem;\r\n  height: 3rem;\r\n  position: relative;\r\n  top: -.4rem;\r\n  -moz-border-radius: 50%;\r\n  -webkit-border-radius: 50%;\r\n  border-radius: 50%;\r\n  overflow: hidden;\r\n}\r\n/* line 158, ../scss/common/_header.scss */\r\nheader .navSelf .login .self img, header .navSelf .login .self:hover img {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n/* line 167, ../scss/common/_header.scss */\r\nheader .navSelf .btn-fb a {\r\n  display: block;\r\n  height: 2.2rem;\r\n}\r\n/* line 171, ../scss/common/_header.scss */\r\nheader .navSelf .btn-fb a img {\r\n  height: 100%;\r\n  width: auto;\r\n}\r\n/* line 178, ../scss/common/_header.scss */\r\nheader .search {\r\n  line-height: 2.2rem;\r\n  padding: 1.5rem 0;\r\n  float: right;\r\n  margin: 0 .8rem;\r\n}\r\n/* line 184, ../scss/common/_header.scss */\r\nheader .search .icon-search {\r\n  font-size: 1.5rem;\r\n  display: block;\r\n  float: right;\r\n  line-height: 2.2rem;\r\n  margin: 1px 0 0 .1rem;\r\n  color: #818181;\r\n}\r\n/* line 192, ../scss/common/_header.scss */\r\nheader .search .icon-search:hover {\r\n  color: #000000;\r\n}\r\n/* line 196, ../scss/common/_header.scss */\r\nheader .search input {\r\n  padding: .45rem;\r\n  line-height: 1.2rem;\r\n  border: 1px solid #d6d6d6;\r\n  width: 10rem;\r\n  float: right;\r\n}\r\n\r\n/* line 208, ../scss/common/_header.scss */\r\nfooter {\r\n  background: #393f48;\r\n  width: 100%;\r\n  float: left;\r\n  font-size: 1.2rem;\r\n  color: #aeb0b2;\r\n}\r\n/* line 215, ../scss/common/_header.scss */\r\nfooter a {\r\n  color: #aeb0b2;\r\n}\r\n/* line 219, ../scss/common/_header.scss */\r\nfooter .area-btn {\r\n  line-height: 4.6rem;\r\n  border-bottom: 1px solid #aeb0b2;\r\n}\r\n/* line 223, ../scss/common/_header.scss */\r\nfooter .area-btn a {\r\n  margin: 0 1rem;\r\n}\r\n/* line 226, ../scss/common/_header.scss */\r\nfooter .area-btn a:hover {\r\n  color: #ffffff;\r\n}\r\n/* line 229, ../scss/common/_header.scss */\r\nfooter .area-btn .lang {\r\n  float: right;\r\n}\r\n/* line 232, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang {\r\n  border: 1px solid #aeb0b2;\r\n  margin: 1.2rem 1rem 0;\r\n  float: right;\r\n}\r\n/* line 237, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang .icon-arrIn {\r\n  top: .5rem;\r\n}\r\n/* line 241, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang ul {\r\n  width: 7.2rem;\r\n  background: #b5babd;\r\n  border: 1px solid #8b949c;\r\n}\r\n/* line 246, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang ul li {\r\n  color: #000000;\r\n}\r\n/* line 249, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang ul li:hover {\r\n  background: #959ca0;\r\n}\r\n/* line 257, ../scss/common/_header.scss */\r\nfooter .copyright {\r\n  line-height: 4.6rem;\r\n  padding: 0 1rem;\r\n}\r\n/* line 261, ../scss/common/_header.scss */\r\nfooter .copyright span {\r\n  float: right;\r\n  font-size: .8rem;\r\n}\r\n/* line 266, ../scss/common/_header.scss */\r\nfooter .copyright a {\r\n  color: #ffffff;\r\n  background: #5078bb;\r\n  padding: .6rem 1.2rem .6rem 1rem;\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n}\r\n/* line 274, ../scss/common/_header.scss */\r\nfooter .copyright a em {\r\n  margin-right: .5rem;\r\n  font-size: 1.1rem;\r\n}\r\n/* line 279, ../scss/common/_header.scss */\r\nfooter .copyright a:hover {\r\n  background: #3e66a9;\r\n}\r\n\r\n/* line 2, ../scss/com/_index.scss */\r\n.fa-content {\r\n  width: 100%;\r\n  float: left;\r\n  background: #f2f5f8;\r\n  margin-top: 5.2rem;\r\n}\r\n\r\n/* line 10, ../scss/com/_index.scss */\r\n.cp-mainBanner {\r\n  width: 100%;\r\n  padding: .9rem 0;\r\n  margin-bottom: .9rem;\r\n  height: 360px;\r\n  float: left;\r\n  background: #ffffff;\r\n  box-shadow: 0em 0.3em 0.4em rgba(51, 51, 102, 0.1);\r\n}\r\n/* line 19, ../scss/com/_index.scss */\r\n.cp-mainBanner article {\r\n  width: 340px;\r\n  float: left;\r\n  padding: 70px 88px 0 50px;\r\n  color: #999999;\r\n  text-align: center;\r\n  font-size: 1.1rem;\r\n}\r\n/* line 28, ../scss/com/_index.scss */\r\n.cp-mainBanner article h1 {\r\n  color: #000000;\r\n  font-size: 2.2rem;\r\n  line-height: 2.8rem;\r\n  letter-spacing: 1px;\r\n  margin-bottom: 1rem;\r\n  font-weight: bold;\r\n}\r\n/* line 36, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-btn {\r\n  text-align: center;\r\n  margin-top: 1.4rem;\r\n}\r\n/* line 40, ../scss/com/_index.scss */\r\n.cp-mainBanner article .btn-yel {\r\n  font-size: 1.5rem;\r\n  line-height: 3rem;\r\n  padding: 0 2.4rem;\r\n  letter-spacing: 2px;\r\n}\r\n/* line 46, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-page {\r\n  text-align: center;\r\n  margin-top: 2.2rem;\r\n}\r\n/* line 50, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-page a {\r\n  display: inline-block;\r\n  width: .8rem;\r\n  height: .8rem;\r\n  background: #dedede;\r\n  -moz-border-radius: .4rem;\r\n  -webkit-border-radius: .4rem;\r\n  border-radius: .4rem;\r\n  margin: 0 .4rem;\r\n}\r\n/* line 60, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-page a:hover, .cp-mainBanner article .area-page .current {\r\n  background: #ffb300;\r\n}\r\n/* line 66, ../scss/com/_index.scss */\r\n.cp-mainBanner .photo {\r\n  width: 630px;\r\n  float: left;\r\n}\r\n/* line 70, ../scss/com/_index.scss */\r\n.cp-mainBanner .photo img {\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n\r\n/* line 77, ../scss/com/_index.scss */\r\n.cp-menu-category {\r\n  font-size: 1.2rem;\r\n  line-height: 2.3rem;\r\n  float: left;\r\n  margin: 1.2rem 0 5px;\r\n}\r\n/* line 83, ../scss/com/_index.scss */\r\n.cp-menu-category .in-lang {\r\n  background: #ffffff;\r\n}\r\n/* line 87, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn {\r\n  margin-left: 2rem;\r\n  float: left;\r\n  font-weight: bold;\r\n}\r\n/* line 92, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn a {\r\n  color: #8b8b8b;\r\n  margin: 0 .8rem;\r\n  float: left;\r\n}\r\n/* line 97, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn a:hover, .cp-menu-category .area-btn .current {\r\n  color: #000000;\r\n}\r\n/* line 100, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn span {\r\n  line-height: 2.1rem;\r\n  float: left;\r\n}\r\n\r\n/* line 108, ../scss/com/_index.scss */\r\n.cp-dreamWall {\r\n  width: 1005px;\r\n  float: left;\r\n  position: relative;\r\n  left: -18px;\r\n  margin-bottom: 66px;\r\n}\r\n/* line 115, ../scss/com/_index.scss */\r\n.cp-dreamWall .post {\r\n  width: 300px;\r\n  height: 445px;\r\n  position: relative;\r\n  float: left;\r\n  background: #ffffff;\r\n  margin: 12px 17px 12px 18px;\r\n  -moz-border-radius: 6px;\r\n  -webkit-border-radius: 6px;\r\n  border-radius: 6px;\r\n  box-shadow: 0em 0.25rem 0em rgba(51, 51, 102, 0.2);\r\n}\r\n/* line 127, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .new {\r\n  text-align: center;\r\n  color: #ffffff;\r\n  font-weight: bold;\r\n  line-height: 1.3rem;\r\n  background: #ff1744;\r\n  position: absolute;\r\n  top: -.8rem;\r\n  right: -.8rem;\r\n  width: 4rem;\r\n  height: 4rem;\r\n  padding-top: .7rem;\r\n  -moz-border-radius: 2rem;\r\n  -webkit-border-radius: 2rem;\r\n  border-radius: 2rem;\r\n}\r\n/* line 145, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .photo {\r\n  width: 100%;\r\n  height: 230px;\r\n  float: left;\r\n  -moz-border-radius: 6px 6px 0 0;\r\n  -webkit-border-radius: 6px 6px 0 0;\r\n  border-radius: 6px 6px 0 0;\r\n  overflow: hidden;\r\n}\r\n/* line 154, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .photo img {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n/* line 159, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article {\r\n  margin: 12px 16px;\r\n  float: left;\r\n  height: 5.6rem;\r\n}\r\n/* line 164, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article .tit {\r\n  font-size: 1.2rem;\r\n  line-height: 1.8rem;\r\n  max-height: 3.6rem;\r\n  color: #000000;\r\n  float: left;\r\n  overflow: hidden;\r\n}\r\n/* line 172, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article .tit:hover {\r\n  color: #666666;\r\n}\r\n/* line 176, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article p {\r\n  width: 100%;\r\n  margin-top: .5rem;\r\n  font-size: 1.1rem;\r\n  float: left;\r\n}\r\n/* line 183, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article span, .cp-dreamWall .post article p a {\r\n  float: right;\r\n  margin-left: 1rem;\r\n  color: #999999;\r\n}\r\n/* line 188, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article a:hover {\r\n  color: #666666;\r\n}\r\n/* line 191, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article .sort {\r\n  float: left;\r\n  margin: 0;\r\n}\r\n/* line 195, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article em {\r\n  float: left;\r\n  margin: 2px 3px 0 0;\r\n}\r\n/* line 200, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count {\r\n  float: left;\r\n  height: 118px;\r\n}\r\n/* line 204, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote, .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {\r\n  float: left;\r\n  width: 74px;\r\n  height: 74px;\r\n  position: relative;\r\n  border: 0px solid #ffffff;\r\n  margin: 10px 13px 7px;\r\n}\r\n/* line 213, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote span, .cp-dreamWall .post .count .funds span, .cp-dreamWall .post .count .helper span, .cp-dreamWall .post .count .supplies span {\r\n  font-size: 16px;\r\n  color: #000000;\r\n  font-weight: bold;\r\n  float: left;\r\n  width: 100%;\r\n  text-align: center;\r\n  margin-top: 14px;\r\n  margin-top: 12px\\9;\r\n}\r\n/* line 223, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote p, .cp-dreamWall .post .count .funds p, .cp-dreamWall .post .count .helper p, .cp-dreamWall .post .count .supplies p {\r\n  position: absolute;\r\n  display: block;\r\n  width: 74px;\r\n  float: left;\r\n  text-align: center;\r\n  left: 0;\r\n  bottom: -22px;\r\n}\r\n/* line 233, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .funds span {\r\n  margin-top: 24px;\r\n}\r\n/* line 236, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote {\r\n  width: 86px;\r\n  height: 86px;\r\n  margin: 10px 10px 7px 16px;\r\n}\r\n/* line 241, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote span {\r\n  font-size: 24px;\r\n  margin-top: 32px;\r\n  color: #f9a825;\r\n  font-weight: normal;\r\n}\r\n/* line 247, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote .circle-info-half {\r\n  font-size: 16px;\r\n  color: #f9a825;\r\n  margin-top: 34px;\r\n}\r\n/* line 254, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .btn {\r\n  float: left;\r\n  text-align: center;\r\n  width: 180px;\r\n  line-height: 110px;\r\n}\r\n/* line 260, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .btn a {\r\n  font-size: 1.4rem;\r\n  line-height: 2.8rem;\r\n  padding: 0 1.8rem;\r\n  font-weight: bold;\r\n  letter-spacing: 1px;\r\n}\r\n/* line 267, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .btn .close {\r\n  background: #cccccc;\r\n  cursor: default;\r\n}\r\n/* line 274, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .c-none span {\r\n  color: #eaeaea;\r\n}\r\n/* line 277, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .c-none .pro-line {\r\n  display: none;\r\n}\r\n/* line 280, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .c-none p {\r\n  color: #eaeaea;\r\n}\r\n/* line 287, ../scss/com/_index.scss */\r\n.cp-dreamWall .po-vote {\r\n  height: 435px;\r\n}\r\n/* line 290, ../scss/com/_index.scss */\r\n.cp-dreamWall .po-vote .count {\r\n  height: 108px;\r\n}\r\n/* line 295, ../scss/com/_index.scss */\r\n.cp-dreamWall .area-btn {\r\n  text-align: center;\r\n  float: left;\r\n  width: 100%;\r\n  margin: 1.5rem 0;\r\n}\r\n/* line 301, ../scss/com/_index.scss */\r\n.cp-dreamWall .area-btn a {\r\n  color: #ffb300;\r\n  font-size: 1.4rem;\r\n  border: 1px solid #ffb300;\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n  padding: .5rem 1.5rem;\r\n  display: inline-block;\r\n  background: #ffffff;\r\n}\r\n/* line 311, ../scss/com/_index.scss */\r\n.cp-dreamWall .area-btn a:hover {\r\n  border: 1px solid #e89208;\r\n  color: #e89208;\r\n}\r\n/* line 317, ../scss/com/_index.scss */\r\n.cp-dreamWall .post-note {\r\n  font-size: 1.5rem;\r\n  float: left;\r\n  width: 100%;\r\n  text-align: center;\r\n  margin: 5rem 0 3rem;\r\n  line-height: 3rem;\r\n}\r\n/* line 325, ../scss/com/_index.scss */\r\n.cp-dreamWall .post-note .btn-yel {\r\n  margin-top: 1rem;\r\n}\r\n\r\n/* line 331, ../scss/com/_index.scss */\r\n.cp-explain {\r\n  text-align: center;\r\n  background: url(" + __webpack_require__(168) + ") repeat-x;\r\n  float: left;\r\n  width: 100%;\r\n  height: 292px;\r\n  padding: 59px 0;\r\n}\r\n/* line 340, ../scss/com/_index.scss */\r\n.cp-explain a {\r\n  position: relative;\r\n  display: inline-block;\r\n  margin: 0 94px;\r\n  width: 131px;\r\n  height: 131px;\r\n  background: url(" + __webpack_require__(169) + ") no-repeat;\r\n}\r\n/* line 348, ../scss/com/_index.scss */\r\n.cp-explain a p {\r\n  font-size: 1.5rem;\r\n  color: #ffffff;\r\n  font-weight: bold;\r\n  width: 100%;\r\n  position: absolute;\r\n  text-align: center;\r\n  bottom: -40px;\r\n}\r\n/* line 358, ../scss/com/_index.scss */\r\n.cp-explain a em {\r\n  display: none;\r\n  width: 100%;\r\n  height: 100%;\r\n  border: 3px solid #ff6d00;\r\n  -moz-border-radius: 50%;\r\n  -webkit-border-radius: 50%;\r\n  border-radius: 50%;\r\n}\r\n/* line 371, ../scss/com/_index.scss */\r\n.cp-explain a:hover em {\r\n  display: block;\r\n}\r\n/* line 376, ../scss/com/_index.scss */\r\n.cp-explain .btn_case {\r\n  background: url(" + __webpack_require__(170) + ") no-repeat;\r\n}\r\n/* line 379, ../scss/com/_index.scss */\r\n.cp-explain .btn_sponsor {\r\n  background: url(" + __webpack_require__(171) + ") no-repeat;\r\n}\r\n\r\n/* res 解析度版型修正\r\n-----------------------------------------------------------------*/\r\n@media (min-width: 0px) and (max-width: 1023px) {\r\n  /* line 387, ../scss/com/_index.scss */\r\n  html, body {\r\n    font-size: 11px;\r\n  }\r\n\r\n  /* line 391, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 635px;\r\n  }\r\n\r\n  /* line 396, ../scss/com/_index.scss */\r\n  header .logo {\r\n    padding: 1.3rem 0;\r\n    margin-right: 1rem;\r\n  }\r\n  /* line 401, ../scss/com/_index.scss */\r\n  header .label a {\r\n    padding: 0 .6rem;\r\n  }\r\n  /* line 404, ../scss/com/_index.scss */\r\n  header .label .current {\r\n    line-height: 4.45rem;\r\n  }\r\n  /* line 409, ../scss/com/_index.scss */\r\n  header .search input {\r\n    width: 6rem;\r\n  }\r\n  /* line 414, ../scss/com/_index.scss */\r\n  header .navSelf .btn-yel {\r\n    padding: 0 1rem;\r\n  }\r\n  /* line 417, ../scss/com/_index.scss */\r\n  header .navSelf .login {\r\n    margin: 0 0 0 1rem;\r\n  }\r\n  /* line 420, ../scss/com/_index.scss */\r\n  header .navSelf .btn-fb {\r\n    display: none;\r\n  }\r\n\r\n  /* line 426, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 237px;\r\n  }\r\n  /* line 429, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 221px;\r\n    padding: 20px 30px 0 20px;\r\n  }\r\n  /* line 433, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 414px;\r\n  }\r\n\r\n  /* line 438, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 670px;\r\n  }\r\n  /* line 441, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post {\r\n    height: 438px;\r\n  }\r\n  /* line 446, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article p {\r\n    margin: 0;\r\n  }\r\n  /* line 450, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article .tit {\r\n    font-size: 1.3rem;\r\n  }\r\n  /* line 456, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote {\r\n    height: 428px;\r\n  }\r\n  /* line 459, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote .count {\r\n    height: 101px;\r\n  }\r\n\r\n  /* line 466, ../scss/com/_index.scss */\r\n  .cp-explain a {\r\n    margin: 0 39px;\r\n  }\r\n}\r\n@media (min-width: 1510px) and (max-width: 1679px) {\r\n  /* line 473, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 1305px;\r\n  }\r\n\r\n  /* line 476, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 487px;\r\n  }\r\n  /* line 479, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 458px;\r\n    padding: 140px 88px 0 50px;\r\n  }\r\n  /* line 483, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 847px;\r\n  }\r\n\r\n  /* line 488, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 1340px;\r\n  }\r\n}\r\n@media (min-width: 1680px) and (max-width: 1920px) {\r\n  /* line 494, ../scss/com/_index.scss */\r\n  html, body {\r\n    font-size: 15px;\r\n  }\r\n\r\n  /* line 497, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 1385px;\r\n  }\r\n\r\n  /* line 501, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 517px;\r\n  }\r\n  /* line 504, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 485px;\r\n    padding: 140px 88px 0 50px;\r\n  }\r\n  /* line 508, ../scss/com/_index.scss */\r\n  .cp-mainBanner article p {\r\n    line-height: 1.6rem;\r\n  }\r\n  /* line 512, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 900px;\r\n  }\r\n\r\n  /* line 517, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 1420px;\r\n  }\r\n  /* line 520, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post {\r\n    width: 320px;\r\n    height: 475px;\r\n  }\r\n  /* line 524, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .photo {\r\n    height: 245px;\r\n  }\r\n  /* line 529, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article .tit {\r\n    height: 60px;\r\n  }\r\n  /* line 535, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {\r\n    margin: 10px 16px 7px 16px;\r\n  }\r\n  /* line 538, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds span {\r\n    margin-top: 23px;\r\n  }\r\n  /* line 542, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote span {\r\n    margin-top: 30px;\r\n  }\r\n  /* line 545, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote .circle-info-half {\r\n    margin-top: 32px;\r\n  }\r\n  /* line 549, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .btn {\r\n    width: 200px;\r\n  }\r\n  /* line 554, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote {\r\n    height: 464px;\r\n  }\r\n  /* line 557, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote .count {\r\n    height: 108px;\r\n  }\r\n}\r\n@media screen and (min-width: 1921px) {\r\n  /* line 565, ../scss/com/_index.scss */\r\n  html, body {\r\n    font-size: 17px;\r\n  }\r\n\r\n  /* line 568, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 1465px;\r\n  }\r\n\r\n  /* line 572, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 517px;\r\n  }\r\n  /* line 575, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 485px;\r\n    padding: 110px 88px 0 50px;\r\n  }\r\n  /* line 579, ../scss/com/_index.scss */\r\n  .cp-mainBanner article p {\r\n    line-height: 1.6rem;\r\n  }\r\n  /* line 583, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 900px;\r\n  }\r\n\r\n  /* line 588, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 1500px;\r\n  }\r\n  /* line 591, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post {\r\n    width: 340px;\r\n    height: 500px;\r\n  }\r\n  /* line 595, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .photo {\r\n    height: 260px;\r\n  }\r\n  /* line 599, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article {\r\n    margin: 12px 16px 10px;\r\n  }\r\n  /* line 602, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article .tit {\r\n    line-height: 1.9rem;\r\n    height: 70px;\r\n  }\r\n  /* line 609, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {\r\n    margin: 10px 19px 7px 20px;\r\n  }\r\n  /* line 612, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds p, .cp-dreamWall .post .count .helper p, .cp-dreamWall .post .count .supplies p {\r\n    font-size: .8rem;\r\n    bottom: -24px;\r\n  }\r\n  /* line 617, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds span {\r\n    margin-top: 22px;\r\n  }\r\n  /* line 621, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote span {\r\n    margin-top: 30px;\r\n  }\r\n  /* line 624, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote .circle-info-half {\r\n    margin-top: 32px;\r\n  }\r\n  /* line 628, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .btn {\r\n    width: 220px;\r\n  }\r\n  /* line 633, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote {\r\n    height: 490px;\r\n  }\r\n  /* line 636, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote .count {\r\n    height: 108px;\r\n  }\r\n}\r\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\r\n/*@import url(\"../css/iconfont.css\");\r\n*//* http://meyerweb.com/eric/tools/css/reset/ \r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\r\n/* line 17, ../scss/common/_reset.scss */\r\nhtml, body, div, span, applet, object, iframe,\r\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\r\na, abbr, acronym, address, big, cite, code,\r\ndel, dfn, em, img, ins, kbd, q, s, samp,\r\nsmall, strike, strong, sub, sup, tt, var,\r\nb, u, i, center,\r\ndl, dt, dd, ol, ul, li,\r\nfieldset, form, label, legend,\r\ntable, caption, tbody, tfoot, thead, tr, th, td,\r\narticle, aside, canvas, details, embed,\r\nfigure, figcaption, footer, header, hgroup,\r\nmenu, nav, output, ruby, section, summary,\r\ntime, mark, audio, video {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: 0;\r\n  /*font-size: 100%;*/\r\n  font: inherit;\r\n  vertical-align: baseline;\r\n}\r\n\r\n/* HTML5 display-role reset for older browsers */\r\n/* line 27, ../scss/common/_reset.scss */\r\narticle, aside, details, figcaption, figure,\r\nfooter, header, hgroup, menu, nav, section {\r\n  display: block;\r\n}\r\n\r\n/* line 31, ../scss/common/_reset.scss */\r\nbody {\r\n  line-height: 1;\r\n}\r\n\r\n/* line 35, ../scss/common/_reset.scss */\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\n/* line 39, ../scss/common/_reset.scss */\r\nol, ul {\r\n  list-style: none;\r\n}\r\n\r\n/* line 43, ../scss/common/_reset.scss */\r\nblockquote, q {\r\n  quotes: none;\r\n}\r\n\r\n/* line 48, ../scss/common/_reset.scss */\r\nblockquote:before, blockquote:after,\r\nq:before, q:after {\r\n  content: '';\r\n  content: none;\r\n}\r\n\r\n/* line 53, ../scss/common/_reset.scss */\r\ntable {\r\n  border-collapse: collapse;\r\n  border-spacing: 0;\r\n}\r\n\r\n/* line 58, ../scss/common/_reset.scss */\r\ndt {\r\n  clear: left;\r\n}\r\n\r\n/* line 62, ../scss/common/_reset.scss */\r\ninput, button, select, textarea {\r\n  outline: none;\r\n}\r\n\r\n/* line 1, ../scss/common/_frame.scss */\r\nhtml, body {\r\n  /* 字型設定 */\r\n  color: #6b7177;\r\n  font-family: Arial,\"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", Verdana, Tahoma, \"\\65B0\\7D30\\660E\\9AD4\";\r\n  font-size: 13px;\r\n  line-height: 1.4em;\r\n  -webkit-text-size-adjust: none;\r\n  /* 解除瀏覽器最小字型設定 */\r\n}\r\n\r\n/* line 10, ../scss/common/_frame.scss */\r\ninput, select, textarea {\r\n  font-family: Arial,\"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", Verdana, Tahoma, \"\\65B0\\7D30\\660E\\9AD4\";\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n}\r\n\r\n/* line 17, ../scss/common/_frame.scss */\r\nheader .logo, header nav, header .search input, .cp-mainBanner article, .cp-dreamWall .post .new, .cp-dreamWall .post .count .vote, .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies, .cp-explain, .cp-explain a em {\r\n  -webkit-box-sizing: border-box;\r\n  -moz-box-sizing: border-box;\r\n  box-sizing: border-box;\r\n}\r\n\r\n/* line 23, ../scss/common/_frame.scss */\r\n.fa-com {\r\n  width: 970px;\r\n  height: 100%;\r\n  margin: 0 auto;\r\n}\r\n\r\n/* line 29, ../scss/common/_frame.scss */\r\n.fa-theme {\r\n  width: 100%;\r\n  padding: .9rem 0;\r\n  margin-bottom: .9rem;\r\n  float: left;\r\n  background: #ffffff;\r\n  box-shadow: 0em 0.3em 0.4em rgba(51, 51, 102, 0.1);\r\n}\r\n\r\n/* line 2, ../scss/common/_buttons.scss */\r\n.btn-yel {\r\n  background: #ffb300;\r\n  padding: 0 1.5rem;\r\n  display: inline-block;\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n  color: #ffffff;\r\n  text-align: center;\r\n}\r\n\r\n/* line 13, ../scss/common/_buttons.scss */\r\n.btn-yel:hover {\r\n  background: #f29c12;\r\n}\r\n\r\n/* line 2, ../scss/common/_form.scss */\r\n.cp-tit {\r\n  color: #000000;\r\n  font-weight: bold;\r\n  text-align: center;\r\n}\r\n\r\n/* line 8, ../scss/common/_form.scss */\r\n.in-lang {\r\n  color: #8b8b8b;\r\n  border: 1px solid #d6d6d6;\r\n  width: 5.6rem;\r\n  padding: .5rem .8rem;\r\n  line-height: 1rem;\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n  position: relative;\r\n  float: left;\r\n}\r\n/* line 20, ../scss/common/_form.scss */\r\n.in-lang .icon-arrIn {\r\n  position: absolute;\r\n  right: .4rem;\r\n  top: .6rem;\r\n  font-size: .8rem;\r\n}\r\n/* line 27, ../scss/common/_form.scss */\r\n.in-lang ul {\r\n  display: none;\r\n  position: absolute;\r\n  top: 2rem;\r\n  right: -1px;\r\n  text-align: center;\r\n  width: 100%;\r\n  background: #ffffff;\r\n  line-height: 1.8rem;\r\n  filter: alpha(opacity=95);\r\n  -moz-opacity: 0.95;\r\n  opacity: 0.95;\r\n  border: 1px solid #d6d6d6;\r\n  z-index: 10;\r\n}\r\n/* line 42, ../scss/common/_form.scss */\r\n.in-lang ul li {\r\n  color: #000000;\r\n  font-size: 1.1rem;\r\n  padding: .1rem .8rem;\r\n}\r\n/* line 47, ../scss/common/_form.scss */\r\n.in-lang ul li:hover {\r\n  background: #d6d6d6;\r\n}\r\n\r\n/* line 52, ../scss/common/_form.scss */\r\n.in-lang:hover {\r\n  color: #666666;\r\n  border: 1px solid #aaaaaa;\r\n}\r\n/* line 56, ../scss/common/_form.scss */\r\n.in-lang:hover ul {\r\n  display: block;\r\n  border: 1px solid #aaaaaa;\r\n}\r\n\r\n/* line 4, ../scss/common/_header.scss */\r\nheader {\r\n  height: 5.2rem;\r\n  width: 100%;\r\n  border-bottom: 1px solid #eaeaea;\r\n  position: fixed;\r\n  background: #ffffff;\r\n  z-index: 100;\r\n}\r\n/* line 12, ../scss/common/_header.scss */\r\nheader .logo {\r\n  padding: 1rem 0;\r\n  height: 100%;\r\n  float: left;\r\n  margin-right: 3.4rem;\r\n}\r\n/* line 19, ../scss/common/_header.scss */\r\nheader .logo img {\r\n  height: 100%;\r\n  width: auto;\r\n  border: 0;\r\n}\r\n/* line 26, ../scss/common/_header.scss */\r\nheader nav {\r\n  height: 100%;\r\n  float: left;\r\n  position: relative;\r\n  padding-top: .7rem;\r\n}\r\n/* line 33, ../scss/common/_header.scss */\r\nheader nav a {\r\n  font-size: 1.3rem;\r\n  font-weight: bold;\r\n  line-height: 4.5rem;\r\n  height: 100%;\r\n  padding: 0 1.3rem;\r\n  display: block;\r\n  float: left;\r\n  bottom: 0px;\r\n  position: relative;\r\n  color: #8b8b8b;\r\n  background: transparent;\r\n  border-top: 1px solid #ffffff;\r\n  border-left: 0 solid #eaeaea;\r\n  border-right: 0 solid #eaeaea;\r\n  -moz-border-radius: 6px 6px 0 0;\r\n  -webkit-border-radius: 6px 6px 0 0;\r\n  border-radius: 6px 6px 0 0;\r\n}\r\n/* line 52, ../scss/common/_header.scss */\r\nheader nav a .btnLeft, header nav a .btnRight {\r\n  background: white url(" + __webpack_require__(169) + ");\r\n  position: absolute;\r\n  left: -6px;\r\n  bottom: 0px;\r\n  display: none;\r\n  width: 7px;\r\n  height: 6px;\r\n}\r\n/* line 61, ../scss/common/_header.scss */\r\nheader nav a .btnRight {\r\n  background: white url(" + __webpack_require__(170) + ");\r\n  left: auto;\r\n  right: -6px;\r\n}\r\n/* line 68, ../scss/common/_header.scss */\r\nheader nav a:hover {\r\n  color: #000000;\r\n}\r\n/* line 72, ../scss/common/_header.scss */\r\nheader nav .current {\r\n  color: #000000;\r\n  background: #ffffff;\r\n  border-top: 1px solid #eaeaea;\r\n  border-left: 1px solid #eaeaea;\r\n  border-right: 1px solid #eaeaea;\r\n}\r\n/* line 79, ../scss/common/_header.scss */\r\nheader nav .current .btnLeft, header nav .current .btnRight {\r\n  display: block;\r\n}\r\n/* line 84, ../scss/common/_header.scss */\r\nheader nav .icon-arrLa {\r\n  font-size: 1.5rem;\r\n  line-height: 4.5rem;\r\n  display: block;\r\n  color: silver;\r\n  margin: 0 .5rem;\r\n  float: left;\r\n  position: relative;\r\n}\r\n/* line 95, ../scss/common/_header.scss */\r\nheader .navSelf {\r\n  float: right;\r\n  color: #969696;\r\n  font-size: 1.2rem;\r\n  line-height: 2.2rem;\r\n  padding: 1.5rem 0;\r\n}\r\n/* line 102, ../scss/common/_header.scss */\r\nheader .navSelf li {\r\n  height: 100%;\r\n  float: right;\r\n  margin: 0 .4rem;\r\n}\r\n/* line 108, ../scss/common/_header.scss */\r\nheader .navSelf .login {\r\n  color: #969696;\r\n  margin: 0 0 0 1.5rem;\r\n}\r\n/* line 112, ../scss/common/_header.scss */\r\nheader .navSelf .login a {\r\n  margin: 0 .5rem;\r\n  color: #969696;\r\n  float: left;\r\n}\r\n/* line 117, ../scss/common/_header.scss */\r\nheader .navSelf .login a:hover {\r\n  margin: 0 .5rem;\r\n  color: #000000;\r\n}\r\n/* line 121, ../scss/common/_header.scss */\r\nheader .navSelf .login .icon-notice, header .navSelf .login .icon-notice:hover {\r\n  font-size: 1.5rem;\r\n  top: .3rem;\r\n  margin: 0 .7rem 0 .5rem;\r\n  position: relative;\r\n}\r\n/* line 127, ../scss/common/_header.scss */\r\nheader .navSelf .login .icon-notice em, header .navSelf .login .icon-notice:hover em {\r\n  -moz-border-radius: 50%;\r\n  -webkit-border-radius: 50%;\r\n  border-radius: 50%;\r\n  background: #ff1744;\r\n  font-size: 11px;\r\n  line-height: 11px;\r\n  min-width: 11px;\r\n  text-align: center;\r\n  position: absolute;\r\n  top: -.5rem;\r\n  right: -.5rem;\r\n  display: block;\r\n  padding: 3px;\r\n  color: #ffffff;\r\n}\r\n/* line 144, ../scss/common/_header.scss */\r\nheader .navSelf .login span {\r\n  float: left;\r\n  line-height: 2rem;\r\n}\r\n/* line 148, ../scss/common/_header.scss */\r\nheader .navSelf .login .self, header .navSelf .login .self:hover {\r\n  width: 3rem;\r\n  height: 3rem;\r\n  position: relative;\r\n  top: -.4rem;\r\n  -moz-border-radius: 50%;\r\n  -webkit-border-radius: 50%;\r\n  border-radius: 50%;\r\n  overflow: hidden;\r\n}\r\n/* line 158, ../scss/common/_header.scss */\r\nheader .navSelf .login .self img, header .navSelf .login .self:hover img {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n/* line 167, ../scss/common/_header.scss */\r\nheader .navSelf .btn-fb a {\r\n  display: block;\r\n  height: 2.2rem;\r\n}\r\n/* line 171, ../scss/common/_header.scss */\r\nheader .navSelf .btn-fb a img {\r\n  height: 100%;\r\n  width: auto;\r\n}\r\n/* line 178, ../scss/common/_header.scss */\r\nheader .search {\r\n  line-height: 2.2rem;\r\n  padding: 1.5rem 0;\r\n  float: right;\r\n  margin: 0 .8rem;\r\n}\r\n/* line 184, ../scss/common/_header.scss */\r\nheader .search .icon-search {\r\n  font-size: 1.5rem;\r\n  display: block;\r\n  float: right;\r\n  line-height: 2.2rem;\r\n  margin: 1px 0 0 .1rem;\r\n  color: #818181;\r\n}\r\n/* line 192, ../scss/common/_header.scss */\r\nheader .search .icon-search:hover {\r\n  color: #000000;\r\n}\r\n/* line 196, ../scss/common/_header.scss */\r\nheader .search input {\r\n  padding: .45rem;\r\n  line-height: 1.2rem;\r\n  border: 1px solid #d6d6d6;\r\n  width: 10rem;\r\n  float: right;\r\n}\r\n\r\n/* line 208, ../scss/common/_header.scss */\r\nfooter {\r\n  background: #393f48;\r\n  width: 100%;\r\n  float: left;\r\n  font-size: 1.2rem;\r\n  color: #aeb0b2;\r\n}\r\n/* line 215, ../scss/common/_header.scss */\r\nfooter a {\r\n  color: #aeb0b2;\r\n}\r\n/* line 219, ../scss/common/_header.scss */\r\nfooter .area-btn {\r\n  line-height: 4.6rem;\r\n  border-bottom: 1px solid #aeb0b2;\r\n}\r\n/* line 223, ../scss/common/_header.scss */\r\nfooter .area-btn a {\r\n  margin: 0 1rem;\r\n}\r\n/* line 226, ../scss/common/_header.scss */\r\nfooter .area-btn a:hover {\r\n  color: #ffffff;\r\n}\r\n/* line 229, ../scss/common/_header.scss */\r\nfooter .area-btn .lang {\r\n  float: right;\r\n}\r\n/* line 232, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang {\r\n  border: 1px solid #aeb0b2;\r\n  margin: 1.2rem 1rem 0;\r\n  float: right;\r\n}\r\n/* line 237, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang .icon-arrIn {\r\n  top: .5rem;\r\n}\r\n/* line 241, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang ul {\r\n  width: 7.2rem;\r\n  background: #b5babd;\r\n  border: 1px solid #8b949c;\r\n}\r\n/* line 246, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang ul li {\r\n  color: #000000;\r\n}\r\n/* line 249, ../scss/common/_header.scss */\r\nfooter .area-btn .lang .in-lang ul li:hover {\r\n  background: #959ca0;\r\n}\r\n/* line 257, ../scss/common/_header.scss */\r\nfooter .copyright {\r\n  line-height: 4.6rem;\r\n  padding: 0 1rem;\r\n}\r\n/* line 261, ../scss/common/_header.scss */\r\nfooter .copyright span {\r\n  float: right;\r\n  font-size: .8rem;\r\n}\r\n/* line 266, ../scss/common/_header.scss */\r\nfooter .copyright a {\r\n  color: #ffffff;\r\n  background: #5078bb;\r\n  padding: .6rem 1.2rem .6rem 1rem;\r\n  -moz-border-radius: 3px;\r\n  -webkit-border-radius: 3px;\r\n  border-radius: 3px;\r\n}\r\n/* line 274, ../scss/common/_header.scss */\r\nfooter .copyright a em {\r\n  margin-right: .5rem;\r\n  font-size: 1.1rem;\r\n}\r\n/* line 279, ../scss/common/_header.scss */\r\nfooter .copyright a:hover {\r\n  background: #3e66a9;\r\n}\r\n\r\n/* line 2, ../scss/com/_index.scss */\r\n.fa-content {\r\n  width: 100%;\r\n  float: left;\r\n  background: #f2f5f8;\r\n  margin-top: 5.2rem;\r\n}\r\n\r\n/* line 10, ../scss/com/_index.scss */\r\n.cp-mainBanner {\r\n  width: 100%;\r\n  padding: .9rem 0;\r\n  margin-bottom: .9rem;\r\n  height: 360px;\r\n  float: left;\r\n  background: #ffffff;\r\n  box-shadow: 0em 0.3em 0.4em rgba(51, 51, 102, 0.1);\r\n}\r\n/* line 19, ../scss/com/_index.scss */\r\n.cp-mainBanner article {\r\n  width: 340px;\r\n  float: left;\r\n  padding: 70px 88px 0 50px;\r\n  color: #999999;\r\n  text-align: center;\r\n  font-size: 1.1rem;\r\n}\r\n/* line 28, ../scss/com/_index.scss */\r\n.cp-mainBanner article h1 {\r\n  color: #000000;\r\n  font-size: 2.2rem;\r\n  line-height: 2.8rem;\r\n  letter-spacing: 1px;\r\n  margin-bottom: 1rem;\r\n  font-weight: bold;\r\n}\r\n/* line 36, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-btn {\r\n  text-align: center;\r\n  margin-top: 1.4rem;\r\n}\r\n/* line 40, ../scss/com/_index.scss */\r\n.cp-mainBanner article .btn-yel {\r\n  font-size: 1.5rem;\r\n  line-height: 3rem;\r\n  padding: 0 2.4rem;\r\n  letter-spacing: 2px;\r\n}\r\n/* line 46, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-page {\r\n  text-align: center;\r\n  margin-top: 2.2rem;\r\n}\r\n/* line 50, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-page a {\r\n  display: inline-block;\r\n  width: .8rem;\r\n  height: .8rem;\r\n  background: #dedede;\r\n  -moz-border-radius: .4rem;\r\n  -webkit-border-radius: .4rem;\r\n  border-radius: .4rem;\r\n  margin: 0 .4rem;\r\n}\r\n/* line 60, ../scss/com/_index.scss */\r\n.cp-mainBanner article .area-page a:hover, .cp-mainBanner article .area-page .current {\r\n  background: #ffb300;\r\n}\r\n/* line 66, ../scss/com/_index.scss */\r\n.cp-mainBanner .photo {\r\n  width: 630px;\r\n  float: left;\r\n}\r\n/* line 70, ../scss/com/_index.scss */\r\n.cp-mainBanner .photo img {\r\n  width: 100%;\r\n  height: auto;\r\n}\r\n\r\n/* line 77, ../scss/com/_index.scss */\r\n.cp-menu-category {\r\n  font-size: 1.2rem;\r\n  line-height: 2.3rem;\r\n  float: left;\r\n  margin: 1.2rem 0 5px;\r\n}\r\n/* line 83, ../scss/com/_index.scss */\r\n.cp-menu-category .in-lang {\r\n  background: #ffffff;\r\n}\r\n/* line 87, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn {\r\n  margin-left: 2rem;\r\n  float: left;\r\n  font-weight: bold;\r\n}\r\n/* line 92, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn a {\r\n  color: #8b8b8b;\r\n  margin: 0 .8rem;\r\n  float: left;\r\n}\r\n/* line 97, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn a:hover, .cp-menu-category .area-btn .current {\r\n  color: #000000;\r\n}\r\n/* line 100, ../scss/com/_index.scss */\r\n.cp-menu-category .area-btn span {\r\n  line-height: 2.1rem;\r\n  float: left;\r\n}\r\n\r\n/* line 108, ../scss/com/_index.scss */\r\n.cp-dreamWall {\r\n  width: 1005px;\r\n  float: left;\r\n  position: relative;\r\n  left: -18px;\r\n  margin-bottom: 66px;\r\n}\r\n/* line 115, ../scss/com/_index.scss */\r\n.cp-dreamWall .post {\r\n  width: 300px;\r\n  height: 445px;\r\n  position: relative;\r\n  float: left;\r\n  background: #ffffff;\r\n  margin: 12px 17px 12px 18px;\r\n  -moz-border-radius: 6px;\r\n  -webkit-border-radius: 6px;\r\n  border-radius: 6px;\r\n  box-shadow: 0em 0.25rem 0em rgba(51, 51, 102, 0.2);\r\n}\r\n/* line 127, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .new {\r\n  text-align: center;\r\n  color: #ffffff;\r\n  font-weight: bold;\r\n  line-height: 1.3rem;\r\n  background: #ff1744;\r\n  position: absolute;\r\n  top: -.8rem;\r\n  right: -.8rem;\r\n  width: 4rem;\r\n  height: 4rem;\r\n  padding-top: .7rem;\r\n  -moz-border-radius: 2rem;\r\n  -webkit-border-radius: 2rem;\r\n  border-radius: 2rem;\r\n}\r\n/* line 145, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .photo {\r\n  width: 100%;\r\n  height: 230px;\r\n  float: left;\r\n  -moz-border-radius: 6px 6px 0 0;\r\n  -webkit-border-radius: 6px 6px 0 0;\r\n  border-radius: 6px 6px 0 0;\r\n  overflow: hidden;\r\n}\r\n/* line 154, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .photo img {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n/* line 159, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article {\r\n  margin: 12px 16px;\r\n  float: left;\r\n  height: 5.6rem;\r\n}\r\n/* line 164, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article .tit {\r\n  font-size: 1.2rem;\r\n  line-height: 1.8rem;\r\n  max-height: 3.6rem;\r\n  color: #000000;\r\n  float: left;\r\n  overflow: hidden;\r\n}\r\n/* line 172, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article .tit:hover {\r\n  color: #666666;\r\n}\r\n/* line 176, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article p {\r\n  width: 100%;\r\n  margin-top: .5rem;\r\n  font-size: 1.1rem;\r\n  float: left;\r\n}\r\n/* line 183, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article span, .cp-dreamWall .post article p a {\r\n  float: right;\r\n  margin-left: 1rem;\r\n  color: #999999;\r\n}\r\n/* line 188, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article a:hover {\r\n  color: #666666;\r\n}\r\n/* line 191, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article .sort {\r\n  float: left;\r\n  margin: 0;\r\n}\r\n/* line 195, ../scss/com/_index.scss */\r\n.cp-dreamWall .post article em {\r\n  float: left;\r\n  margin: 2px 3px 0 0;\r\n}\r\n/* line 200, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count {\r\n  float: left;\r\n  height: 118px;\r\n}\r\n/* line 204, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote, .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {\r\n  float: left;\r\n  width: 74px;\r\n  height: 74px;\r\n  position: relative;\r\n  border: 0px solid #ffffff;\r\n  margin: 10px 13px 7px;\r\n}\r\n/* line 213, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote span, .cp-dreamWall .post .count .funds span, .cp-dreamWall .post .count .helper span, .cp-dreamWall .post .count .supplies span {\r\n  font-size: 16px;\r\n  color: #000000;\r\n  font-weight: bold;\r\n  float: left;\r\n  width: 100%;\r\n  text-align: center;\r\n  margin-top: 14px;\r\n  margin-top: 12px\\9;\r\n}\r\n/* line 223, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote p, .cp-dreamWall .post .count .funds p, .cp-dreamWall .post .count .helper p, .cp-dreamWall .post .count .supplies p {\r\n  position: absolute;\r\n  display: block;\r\n  width: 74px;\r\n  float: left;\r\n  text-align: center;\r\n  left: 0;\r\n  bottom: -22px;\r\n}\r\n/* line 233, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .funds span {\r\n  margin-top: 24px;\r\n}\r\n/* line 236, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote {\r\n  width: 86px;\r\n  height: 86px;\r\n  margin: 10px 10px 7px 16px;\r\n}\r\n/* line 241, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote span {\r\n  font-size: 24px;\r\n  margin-top: 32px;\r\n  color: #f9a825;\r\n  font-weight: normal;\r\n}\r\n/* line 247, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .vote .circle-info-half {\r\n  font-size: 16px;\r\n  color: #f9a825;\r\n  margin-top: 34px;\r\n}\r\n/* line 254, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .btn {\r\n  float: left;\r\n  text-align: center;\r\n  width: 180px;\r\n  line-height: 110px;\r\n}\r\n/* line 260, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .btn a {\r\n  font-size: 1.4rem;\r\n  line-height: 2.8rem;\r\n  padding: 0 1.8rem;\r\n  font-weight: bold;\r\n  letter-spacing: 1px;\r\n}\r\n/* line 267, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .btn .close {\r\n  background: #cccccc;\r\n  cursor: default;\r\n}\r\n/* line 274, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .c-none span {\r\n  color: #eaeaea;\r\n}\r\n/* line 277, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .c-none .pro-line {\r\n  display: none;\r\n}\r\n/* line 280, ../scss/com/_index.scss */\r\n.cp-dreamWall .post .count .c-none p {\r\n  color: #eaeaea;\r\n}\r\n/* line 287, ../scss/com/_index.scss */\r\n.cp-dreamWall .po-vote {\r\n  height: 435px;\r\n}\r\n/* line 290, ../scss/com/_index.scss */\r\n.cp-dreamWall .po-vote .count {\r\n  height: 108px;\r\n}\r\n/* line 295, ../scss/com/_index.scss */\r\n.cp-dreamWall .area-btn {\r\n  text-align: center;\r\n  float: left;\r\n  width: 100%;\r\n  margin: 1.5rem 0;\r\n}\r\n/* line 301, ../scss/com/_index.scss */\r\n.cp-dreamWall .area-btn a {\r\n  color: #ffb300;\r\n  font-size: 1.4rem;\r\n  border: 1px solid #ffb300;\r\n  letter-spacing: 1px;\r\n  font-weight: bold;\r\n  padding: .5rem 1.5rem;\r\n  display: inline-block;\r\n  background: #ffffff;\r\n}\r\n/* line 311, ../scss/com/_index.scss */\r\n.cp-dreamWall .area-btn a:hover {\r\n  border: 1px solid #e89208;\r\n  color: #e89208;\r\n}\r\n/* line 317, ../scss/com/_index.scss */\r\n.cp-dreamWall .post-note {\r\n  font-size: 1.5rem;\r\n  float: left;\r\n  width: 100%;\r\n  text-align: center;\r\n  margin: 5rem 0 3rem;\r\n  line-height: 3rem;\r\n}\r\n/* line 325, ../scss/com/_index.scss */\r\n.cp-dreamWall .post-note .btn-yel {\r\n  margin-top: 1rem;\r\n}\r\n\r\n/* line 331, ../scss/com/_index.scss */\r\n.cp-explain {\r\n  text-align: center;\r\n  background: url(" + __webpack_require__(171) + ") repeat-x;\r\n  float: left;\r\n  width: 100%;\r\n  height: 292px;\r\n  padding: 59px 0;\r\n}\r\n/* line 340, ../scss/com/_index.scss */\r\n.cp-explain a {\r\n  position: relative;\r\n  display: inline-block;\r\n  margin: 0 94px;\r\n  width: 131px;\r\n  height: 131px;\r\n  background: url(" + __webpack_require__(172) + ") no-repeat;\r\n}\r\n/* line 348, ../scss/com/_index.scss */\r\n.cp-explain a p {\r\n  font-size: 1.5rem;\r\n  color: #ffffff;\r\n  font-weight: bold;\r\n  width: 100%;\r\n  position: absolute;\r\n  text-align: center;\r\n  bottom: -40px;\r\n}\r\n/* line 358, ../scss/com/_index.scss */\r\n.cp-explain a em {\r\n  display: none;\r\n  width: 100%;\r\n  height: 100%;\r\n  border: 3px solid #ff6d00;\r\n  -moz-border-radius: 50%;\r\n  -webkit-border-radius: 50%;\r\n  border-radius: 50%;\r\n}\r\n/* line 371, ../scss/com/_index.scss */\r\n.cp-explain a:hover em {\r\n  display: block;\r\n}\r\n/* line 376, ../scss/com/_index.scss */\r\n.cp-explain .btn_case {\r\n  background: url(" + __webpack_require__(173) + ") no-repeat;\r\n}\r\n/* line 379, ../scss/com/_index.scss */\r\n.cp-explain .btn_sponsor {\r\n  background: url(" + __webpack_require__(174) + ") no-repeat;\r\n}\r\n\r\n/* res 解析度版型修正\r\n-----------------------------------------------------------------*/\r\n@media (min-width: 0px) and (max-width: 1023px) {\r\n  /* line 387, ../scss/com/_index.scss */\r\n  html, body {\r\n    font-size: 11px;\r\n  }\r\n\r\n  /* line 391, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 635px;\r\n  }\r\n\r\n  /* line 396, ../scss/com/_index.scss */\r\n  header .logo {\r\n    padding: 1.3rem 0;\r\n    margin-right: 1rem;\r\n  }\r\n  /* line 401, ../scss/com/_index.scss */\r\n  header .label a {\r\n    padding: 0 .6rem;\r\n  }\r\n  /* line 404, ../scss/com/_index.scss */\r\n  header .label .current {\r\n    line-height: 4.45rem;\r\n  }\r\n  /* line 409, ../scss/com/_index.scss */\r\n  header .search input {\r\n    width: 6rem;\r\n  }\r\n  /* line 414, ../scss/com/_index.scss */\r\n  header .navSelf .btn-yel {\r\n    padding: 0 1rem;\r\n  }\r\n  /* line 417, ../scss/com/_index.scss */\r\n  header .navSelf .login {\r\n    margin: 0 0 0 1rem;\r\n  }\r\n  /* line 420, ../scss/com/_index.scss */\r\n  header .navSelf .btn-fb {\r\n    display: none;\r\n  }\r\n\r\n  /* line 426, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 237px;\r\n  }\r\n  /* line 429, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 221px;\r\n    padding: 20px 30px 0 20px;\r\n  }\r\n  /* line 433, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 414px;\r\n  }\r\n\r\n  /* line 438, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 670px;\r\n  }\r\n  /* line 441, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post {\r\n    height: 438px;\r\n  }\r\n  /* line 446, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article p {\r\n    margin: 0;\r\n  }\r\n  /* line 450, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article .tit {\r\n    font-size: 1.3rem;\r\n  }\r\n  /* line 456, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote {\r\n    height: 428px;\r\n  }\r\n  /* line 459, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote .count {\r\n    height: 101px;\r\n  }\r\n\r\n  /* line 466, ../scss/com/_index.scss */\r\n  .cp-explain a {\r\n    margin: 0 39px;\r\n  }\r\n}\r\n@media (min-width: 1510px) and (max-width: 1679px) {\r\n  /* line 473, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 1305px;\r\n  }\r\n\r\n  /* line 476, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 487px;\r\n  }\r\n  /* line 479, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 458px;\r\n    padding: 140px 88px 0 50px;\r\n  }\r\n  /* line 483, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 847px;\r\n  }\r\n\r\n  /* line 488, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 1340px;\r\n  }\r\n}\r\n@media (min-width: 1680px) and (max-width: 1920px) {\r\n  /* line 494, ../scss/com/_index.scss */\r\n  html, body {\r\n    font-size: 15px;\r\n  }\r\n\r\n  /* line 497, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 1385px;\r\n  }\r\n\r\n  /* line 501, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 517px;\r\n  }\r\n  /* line 504, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 485px;\r\n    padding: 140px 88px 0 50px;\r\n  }\r\n  /* line 508, ../scss/com/_index.scss */\r\n  .cp-mainBanner article p {\r\n    line-height: 1.6rem;\r\n  }\r\n  /* line 512, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 900px;\r\n  }\r\n\r\n  /* line 517, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 1420px;\r\n  }\r\n  /* line 520, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post {\r\n    width: 320px;\r\n    height: 475px;\r\n  }\r\n  /* line 524, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .photo {\r\n    height: 245px;\r\n  }\r\n  /* line 529, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article .tit {\r\n    height: 60px;\r\n  }\r\n  /* line 535, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {\r\n    margin: 10px 16px 7px 16px;\r\n  }\r\n  /* line 538, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds span {\r\n    margin-top: 23px;\r\n  }\r\n  /* line 542, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote span {\r\n    margin-top: 30px;\r\n  }\r\n  /* line 545, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote .circle-info-half {\r\n    margin-top: 32px;\r\n  }\r\n  /* line 549, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .btn {\r\n    width: 200px;\r\n  }\r\n  /* line 554, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote {\r\n    height: 464px;\r\n  }\r\n  /* line 557, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote .count {\r\n    height: 108px;\r\n  }\r\n}\r\n@media screen and (min-width: 1921px) {\r\n  /* line 565, ../scss/com/_index.scss */\r\n  html, body {\r\n    font-size: 17px;\r\n  }\r\n\r\n  /* line 568, ../scss/com/_index.scss */\r\n  .fa-com {\r\n    width: 1465px;\r\n  }\r\n\r\n  /* line 572, ../scss/com/_index.scss */\r\n  .cp-mainBanner {\r\n    height: 517px;\r\n  }\r\n  /* line 575, ../scss/com/_index.scss */\r\n  .cp-mainBanner article {\r\n    width: 485px;\r\n    padding: 110px 88px 0 50px;\r\n  }\r\n  /* line 579, ../scss/com/_index.scss */\r\n  .cp-mainBanner article p {\r\n    line-height: 1.6rem;\r\n  }\r\n  /* line 583, ../scss/com/_index.scss */\r\n  .cp-mainBanner .photo {\r\n    width: 900px;\r\n  }\r\n\r\n  /* line 588, ../scss/com/_index.scss */\r\n  .cp-dreamWall {\r\n    width: 1500px;\r\n  }\r\n  /* line 591, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post {\r\n    width: 340px;\r\n    height: 500px;\r\n  }\r\n  /* line 595, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .photo {\r\n    height: 260px;\r\n  }\r\n  /* line 599, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article {\r\n    margin: 12px 16px 10px;\r\n  }\r\n  /* line 602, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .article .tit {\r\n    line-height: 1.9rem;\r\n    height: 70px;\r\n  }\r\n  /* line 609, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {\r\n    margin: 10px 19px 7px 20px;\r\n  }\r\n  /* line 612, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds p, .cp-dreamWall .post .count .helper p, .cp-dreamWall .post .count .supplies p {\r\n    font-size: .8rem;\r\n    bottom: -24px;\r\n  }\r\n  /* line 617, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .funds span {\r\n    margin-top: 22px;\r\n  }\r\n  /* line 621, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote span {\r\n    margin-top: 30px;\r\n  }\r\n  /* line 624, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .vote .circle-info-half {\r\n    margin-top: 32px;\r\n  }\r\n  /* line 628, ../scss/com/_index.scss */\r\n  .cp-dreamWall .post .count .btn {\r\n    width: 220px;\r\n  }\r\n  /* line 633, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote {\r\n    height: 490px;\r\n  }\r\n  /* line 636, ../scss/com/_index.scss */\r\n  .cp-dreamWall .po-vote .count {\r\n    height: 108px;\r\n  }\r\n}\r\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 165 */
+/* 168 */
 /***/ function(module, exports) {
 
 	/*
@@ -18730,43 +19355,43 @@ webpackJsonp([0,1],[
 	};
 
 /***/ },
-/* 166 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/fc3e3474b04e4286e0956c9bd3394dfe.png"
 
 /***/ },
-/* 167 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/41b242263bfacc3b79f463cda6699d7e.png"
 
 /***/ },
-/* 168 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/912e3681172036bf09f79d382e6d9973.jpg"
 
 /***/ },
-/* 169 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/86be41454834d7aea08acdaff1c20f5c.png"
 
 /***/ },
-/* 170 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/51c384d20c93ec927cf24a663961c30d.png"
 
 /***/ },
-/* 171 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/6e44f34f76e64abd23e9a3378e6339ae.png"
 
 /***/ },
-/* 172 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -18991,16 +19616,16 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 173 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(174);
+	var content = __webpack_require__(177);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(172)(content, {});
+	var update = __webpack_require__(175)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -19017,10 +19642,10 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 174 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(165)();
+	exports = module.exports = __webpack_require__(168)();
 	// imports
 
 

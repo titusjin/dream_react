@@ -4,7 +4,7 @@
 var React = require('react');
 
 var CpmainBanner = require('./CpmainBanner.react');
-var FaCom = require('./CpmainBanner.react');
+var FaCom = require('./FaCom.react');
 
 var FaContent = React.createClass({
 	getInitialState: function() {
