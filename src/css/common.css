@@ -1,0 +1,1159 @@
+@charset "UTF-8";
+/*@import url("../css/iconfont.css");
+*//* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 17, ../scss/common/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*font-size: 100%;*/
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, ../scss/common/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../scss/common/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 35, ../scss/common/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 39, ../scss/common/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 43, ../scss/common/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 48, ../scss/common/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 53, ../scss/common/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 58, ../scss/common/_reset.scss */
+dt {
+  clear: left;
+}
+
+/* line 62, ../scss/common/_reset.scss */
+input, button, select, textarea {
+  outline: none;
+}
+
+/* line 1, ../scss/common/_frame.scss */
+html, body {
+  /* 字型設定 */
+  color: #6b7177;
+  font-family: Arial,"微軟正黑體", Verdana, Tahoma, "新細明體";
+  font-size: 13px;
+  line-height: 1.4em;
+  -webkit-text-size-adjust: none;
+  /* 解除瀏覽器最小字型設定 */
+}
+
+/* line 10, ../scss/common/_frame.scss */
+input, select, textarea {
+  font-family: Arial,"微軟正黑體", Verdana, Tahoma, "新細明體";
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 17, ../scss/common/_frame.scss */
+header .logo, header nav, header .search input, .cp-mainBanner article, .cp-dreamWall .post .new, .cp-dreamWall .post .count .vote, .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies, .cp-explain, .cp-explain a em {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 23, ../scss/common/_frame.scss */
+.fa-com {
+  width: 970px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 29, ../scss/common/_frame.scss */
+.fa-theme {
+  width: 100%;
+  padding: .9rem 0;
+  margin-bottom: .9rem;
+  float: left;
+  background: #ffffff;
+  box-shadow: 0em 0.3em 0.4em rgba(51, 51, 102, 0.1);
+}
+
+/* line 2, ../scss/common/_buttons.scss */
+.btn-yel {
+  background: #ffb300;
+  padding: 0 1.5rem;
+  display: inline-block;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* line 13, ../scss/common/_buttons.scss */
+.btn-yel:hover {
+  background: #f29c12;
+}
+
+/* line 2, ../scss/common/_form.scss */
+.cp-tit {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 8, ../scss/common/_form.scss */
+.in-lang {
+  color: #8b8b8b;
+  border: 1px solid #d6d6d6;
+  width: 5.6rem;
+  padding: .5rem .8rem;
+  line-height: 1rem;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  float: left;
+}
+/* line 20, ../scss/common/_form.scss */
+.in-lang .icon-arrIn {
+  position: absolute;
+  right: .4rem;
+  top: .6rem;
+  font-size: .8rem;
+}
+/* line 27, ../scss/common/_form.scss */
+.in-lang ul {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  right: -1px;
+  text-align: center;
+  width: 100%;
+  background: #ffffff;
+  line-height: 1.8rem;
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 0.95;
+  border: 1px solid #d6d6d6;
+  z-index: 10;
+}
+/* line 42, ../scss/common/_form.scss */
+.in-lang ul li {
+  color: #000000;
+  font-size: 1.1rem;
+  padding: .1rem .8rem;
+}
+/* line 47, ../scss/common/_form.scss */
+.in-lang ul li:hover {
+  background: #d6d6d6;
+}
+
+/* line 52, ../scss/common/_form.scss */
+.in-lang:hover {
+  color: #666666;
+  border: 1px solid #aaaaaa;
+}
+/* line 56, ../scss/common/_form.scss */
+.in-lang:hover ul {
+  display: block;
+  border: 1px solid #aaaaaa;
+}
+
+/* line 4, ../scss/common/_header.scss */
+header {
+  height: 5.2rem;
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+  position: fixed;
+  background: #ffffff;
+  z-index: 100;
+}
+/* line 12, ../scss/common/_header.scss */
+header .logo {
+  padding: 1rem 0;
+  height: 100%;
+  float: left;
+  margin-right: 3.4rem;
+}
+/* line 19, ../scss/common/_header.scss */
+header .logo img {
+  height: 100%;
+  width: auto;
+  border: 0;
+}
+/* line 26, ../scss/common/_header.scss */
+header nav {
+  height: 100%;
+  float: left;
+  position: relative;
+  padding-top: .7rem;
+}
+/* line 33, ../scss/common/_header.scss */
+header nav a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 4.5rem;
+  height: 100%;
+  padding: 0 1.3rem;
+  display: block;
+  float: left;
+  bottom: 0px;
+  position: relative;
+  color: #8b8b8b;
+  background: transparent;
+  border-top: 1px solid #ffffff;
+  border-left: 0 solid #eaeaea;
+  border-right: 0 solid #eaeaea;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+/* line 52, ../scss/common/_header.scss */
+header nav a .btnLeft, header nav a .btnRight {
+  background: white url(../img/com/btnLeft.png);
+  position: absolute;
+  left: -6px;
+  bottom: 0px;
+  display: none;
+  width: 7px;
+  height: 6px;
+}
+/* line 61, ../scss/common/_header.scss */
+header nav a .btnRight {
+  background: white url(../img/com/btnRight.png);
+  left: auto;
+  right: -6px;
+}
+/* line 68, ../scss/common/_header.scss */
+header nav a:hover {
+  color: #000000;
+}
+/* line 72, ../scss/common/_header.scss */
+header nav .current {
+  color: #000000;
+  background: #ffffff;
+  border-top: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+/* line 79, ../scss/common/_header.scss */
+header nav .current .btnLeft, header nav .current .btnRight {
+  display: block;
+}
+/* line 84, ../scss/common/_header.scss */
+header nav .icon-arrLa {
+  font-size: 1.5rem;
+  line-height: 4.5rem;
+  display: block;
+  color: silver;
+  margin: 0 .5rem;
+  float: left;
+  position: relative;
+}
+/* line 95, ../scss/common/_header.scss */
+header .navSelf {
+  float: right;
+  color: #969696;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  padding: 1.5rem 0;
+}
+/* line 102, ../scss/common/_header.scss */
+header .navSelf li {
+  height: 100%;
+  float: right;
+  margin: 0 .4rem;
+}
+/* line 108, ../scss/common/_header.scss */
+header .navSelf .login {
+  color: #969696;
+  margin: 0 0 0 1.5rem;
+}
+/* line 112, ../scss/common/_header.scss */
+header .navSelf .login a {
+  margin: 0 .5rem;
+  color: #969696;
+  float: left;
+}
+/* line 117, ../scss/common/_header.scss */
+header .navSelf .login a:hover {
+  margin: 0 .5rem;
+  color: #000000;
+}
+/* line 121, ../scss/common/_header.scss */
+header .navSelf .login .icon-notice, header .navSelf .login .icon-notice:hover {
+  font-size: 1.5rem;
+  top: .3rem;
+  margin: 0 .7rem 0 .5rem;
+  position: relative;
+}
+/* line 127, ../scss/common/_header.scss */
+header .navSelf .login .icon-notice em, header .navSelf .login .icon-notice:hover em {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #ff1744;
+  font-size: 11px;
+  line-height: 11px;
+  min-width: 11px;
+  text-align: center;
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+  display: block;
+  padding: 3px;
+  color: #ffffff;
+}
+/* line 144, ../scss/common/_header.scss */
+header .navSelf .login span {
+  float: left;
+  line-height: 2rem;
+}
+/* line 148, ../scss/common/_header.scss */
+header .navSelf .login .self, header .navSelf .login .self:hover {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: -.4rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* line 158, ../scss/common/_header.scss */
+header .navSelf .login .self img, header .navSelf .login .self:hover img {
+  width: 100%;
+  height: 100%;
+}
+/* line 167, ../scss/common/_header.scss */
+header .navSelf .btn-fb a {
+  display: block;
+  height: 2.2rem;
+}
+/* line 171, ../scss/common/_header.scss */
+header .navSelf .btn-fb a img {
+  height: 100%;
+  width: auto;
+}
+/* line 178, ../scss/common/_header.scss */
+header .search {
+  line-height: 2.2rem;
+  padding: 1.5rem 0;
+  float: right;
+  margin: 0 .8rem;
+}
+/* line 184, ../scss/common/_header.scss */
+header .search .icon-search {
+  font-size: 1.5rem;
+  display: block;
+  float: right;
+  line-height: 2.2rem;
+  margin: 1px 0 0 .1rem;
+  color: #818181;
+}
+/* line 192, ../scss/common/_header.scss */
+header .search .icon-search:hover {
+  color: #000000;
+}
+/* line 196, ../scss/common/_header.scss */
+header .search input {
+  padding: .45rem;
+  line-height: 1.2rem;
+  border: 1px solid #d6d6d6;
+  width: 10rem;
+  float: right;
+}
+
+/* line 208, ../scss/common/_header.scss */
+footer {
+  background: #393f48;
+  width: 100%;
+  float: left;
+  font-size: 1.2rem;
+  color: #aeb0b2;
+}
+/* line 215, ../scss/common/_header.scss */
+footer a {
+  color: #aeb0b2;
+}
+/* line 219, ../scss/common/_header.scss */
+footer .area-btn {
+  line-height: 4.6rem;
+  border-bottom: 1px solid #aeb0b2;
+}
+/* line 223, ../scss/common/_header.scss */
+footer .area-btn a {
+  margin: 0 1rem;
+}
+/* line 226, ../scss/common/_header.scss */
+footer .area-btn a:hover {
+  color: #ffffff;
+}
+/* line 229, ../scss/common/_header.scss */
+footer .area-btn .lang {
+  float: right;
+}
+/* line 232, ../scss/common/_header.scss */
+footer .area-btn .lang .in-lang {
+  border: 1px solid #aeb0b2;
+  margin: 1.2rem 1rem 0;
+  float: right;
+}
+/* line 237, ../scss/common/_header.scss */
+footer .area-btn .lang .in-lang .icon-arrIn {
+  top: .5rem;
+}
+/* line 241, ../scss/common/_header.scss */
+footer .area-btn .lang .in-lang ul {
+  width: 7.2rem;
+  background: #b5babd;
+  border: 1px solid #8b949c;
+}
+/* line 246, ../scss/common/_header.scss */
+footer .area-btn .lang .in-lang ul li {
+  color: #000000;
+}
+/* line 249, ../scss/common/_header.scss */
+footer .area-btn .lang .in-lang ul li:hover {
+  background: #959ca0;
+}
+/* line 257, ../scss/common/_header.scss */
+footer .copyright {
+  line-height: 4.6rem;
+  padding: 0 1rem;
+}
+/* line 261, ../scss/common/_header.scss */
+footer .copyright span {
+  float: right;
+  font-size: .8rem;
+}
+/* line 266, ../scss/common/_header.scss */
+footer .copyright a {
+  color: #ffffff;
+  background: #5078bb;
+  padding: .6rem 1.2rem .6rem 1rem;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 274, ../scss/common/_header.scss */
+footer .copyright a em {
+  margin-right: .5rem;
+  font-size: 1.1rem;
+}
+/* line 279, ../scss/common/_header.scss */
+footer .copyright a:hover {
+  background: #3e66a9;
+}
+
+/* line 2, ../scss/com/_index.scss */
+.fa-content {
+  width: 100%;
+  float: left;
+  background: #f2f5f8;
+  margin-top: 5.2rem;
+}
+
+/* line 10, ../scss/com/_index.scss */
+.cp-mainBanner {
+  width: 100%;
+  padding: .9rem 0;
+  margin-bottom: .9rem;
+  height: 360px;
+  float: left;
+  background: #ffffff;
+  box-shadow: 0em 0.3em 0.4em rgba(51, 51, 102, 0.1);
+}
+/* line 19, ../scss/com/_index.scss */
+.cp-mainBanner article {
+  width: 340px;
+  float: left;
+  padding: 70px 88px 0 50px;
+  color: #999999;
+  text-align: center;
+  font-size: 1.1rem;
+}
+/* line 28, ../scss/com/_index.scss */
+.cp-mainBanner article h1 {
+  color: #000000;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+/* line 36, ../scss/com/_index.scss */
+.cp-mainBanner article .area-btn {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+/* line 40, ../scss/com/_index.scss */
+.cp-mainBanner article .btn-yel {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  padding: 0 2.4rem;
+  letter-spacing: 2px;
+}
+/* line 46, ../scss/com/_index.scss */
+.cp-mainBanner article .area-page {
+  text-align: center;
+  margin-top: 2.2rem;
+}
+/* line 50, ../scss/com/_index.scss */
+.cp-mainBanner article .area-page a {
+  display: inline-block;
+  width: .8rem;
+  height: .8rem;
+  background: #dedede;
+  -moz-border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  border-radius: .4rem;
+  margin: 0 .4rem;
+}
+/* line 60, ../scss/com/_index.scss */
+.cp-mainBanner article .area-page a:hover, .cp-mainBanner article .area-page .current {
+  background: #ffb300;
+}
+/* line 66, ../scss/com/_index.scss */
+.cp-mainBanner .photo {
+  width: 630px;
+  float: left;
+}
+/* line 70, ../scss/com/_index.scss */
+.cp-mainBanner .photo img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 77, ../scss/com/_index.scss */
+.cp-menu-category {
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+  float: left;
+  margin: 1.2rem 0 5px;
+}
+/* line 83, ../scss/com/_index.scss */
+.cp-menu-category .in-lang {
+  background: #ffffff;
+}
+/* line 87, ../scss/com/_index.scss */
+.cp-menu-category .area-btn {
+  margin-left: 2rem;
+  float: left;
+  font-weight: bold;
+}
+/* line 92, ../scss/com/_index.scss */
+.cp-menu-category .area-btn a {
+  color: #8b8b8b;
+  margin: 0 .8rem;
+  float: left;
+}
+/* line 97, ../scss/com/_index.scss */
+.cp-menu-category .area-btn a:hover, .cp-menu-category .area-btn .current {
+  color: #000000;
+}
+/* line 100, ../scss/com/_index.scss */
+.cp-menu-category .area-btn span {
+  line-height: 2.1rem;
+  float: left;
+}
+
+/* line 108, ../scss/com/_index.scss */
+.cp-dreamWall {
+  width: 1005px;
+  float: left;
+  position: relative;
+  left: -18px;
+  margin-bottom: 66px;
+}
+/* line 115, ../scss/com/_index.scss */
+.cp-dreamWall .post {
+  width: 300px;
+  height: 445px;
+  position: relative;
+  float: left;
+  background: #ffffff;
+  margin: 12px 17px 12px 18px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: 0em 0.25rem 0em rgba(51, 51, 102, 0.2);
+}
+/* line 127, ../scss/com/_index.scss */
+.cp-dreamWall .post .new {
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.3rem;
+  background: #ff1744;
+  position: absolute;
+  top: -.8rem;
+  right: -.8rem;
+  width: 4rem;
+  height: 4rem;
+  padding-top: .7rem;
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border-radius: 2rem;
+}
+/* line 145, ../scss/com/_index.scss */
+.cp-dreamWall .post .photo {
+  width: 100%;
+  height: 230px;
+  float: left;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+/* line 154, ../scss/com/_index.scss */
+.cp-dreamWall .post .photo img {
+  width: 100%;
+  height: 100%;
+}
+/* line 159, ../scss/com/_index.scss */
+.cp-dreamWall .post article {
+  margin: 12px 16px;
+  float: left;
+  height: 5.6rem;
+}
+/* line 164, ../scss/com/_index.scss */
+.cp-dreamWall .post article .tit {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  max-height: 3.6rem;
+  color: #000000;
+  float: left;
+  overflow: hidden;
+}
+/* line 172, ../scss/com/_index.scss */
+.cp-dreamWall .post article .tit:hover {
+  color: #666666;
+}
+/* line 176, ../scss/com/_index.scss */
+.cp-dreamWall .post article p {
+  width: 100%;
+  margin-top: .5rem;
+  font-size: 1.1rem;
+  float: left;
+}
+/* line 183, ../scss/com/_index.scss */
+.cp-dreamWall .post article span, .cp-dreamWall .post article p a {
+  float: right;
+  margin-left: 1rem;
+  color: #999999;
+}
+/* line 188, ../scss/com/_index.scss */
+.cp-dreamWall .post article a:hover {
+  color: #666666;
+}
+/* line 191, ../scss/com/_index.scss */
+.cp-dreamWall .post article .sort {
+  float: left;
+  margin: 0;
+}
+/* line 195, ../scss/com/_index.scss */
+.cp-dreamWall .post article em {
+  float: left;
+  margin: 2px 3px 0 0;
+}
+/* line 200, ../scss/com/_index.scss */
+.cp-dreamWall .post .count {
+  float: left;
+  height: 118px;
+}
+/* line 204, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .vote, .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {
+  float: left;
+  width: 74px;
+  height: 74px;
+  position: relative;
+  border: 0px solid #ffffff;
+  margin: 10px 13px 7px;
+}
+/* line 213, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .vote span, .cp-dreamWall .post .count .funds span, .cp-dreamWall .post .count .helper span, .cp-dreamWall .post .count .supplies span {
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: 14px;
+  margin-top: 12px\9;
+}
+/* line 223, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .vote p, .cp-dreamWall .post .count .funds p, .cp-dreamWall .post .count .helper p, .cp-dreamWall .post .count .supplies p {
+  position: absolute;
+  display: block;
+  width: 74px;
+  float: left;
+  text-align: center;
+  left: 0;
+  bottom: -22px;
+}
+/* line 233, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .funds span {
+  margin-top: 24px;
+}
+/* line 236, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .vote {
+  width: 86px;
+  height: 86px;
+  margin: 10px 10px 7px 16px;
+}
+/* line 241, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .vote span {
+  font-size: 24px;
+  margin-top: 32px;
+  color: #f9a825;
+  font-weight: normal;
+}
+/* line 247, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .vote .circle-info-half {
+  font-size: 16px;
+  color: #f9a825;
+  margin-top: 34px;
+}
+/* line 254, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .btn {
+  float: left;
+  text-align: center;
+  width: 180px;
+  line-height: 110px;
+}
+/* line 260, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .btn a {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  padding: 0 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* line 267, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .btn .close {
+  background: #cccccc;
+  cursor: default;
+}
+/* line 274, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .c-none span {
+  color: #eaeaea;
+}
+/* line 277, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .c-none .pro-line {
+  display: none;
+}
+/* line 280, ../scss/com/_index.scss */
+.cp-dreamWall .post .count .c-none p {
+  color: #eaeaea;
+}
+/* line 287, ../scss/com/_index.scss */
+.cp-dreamWall .po-vote {
+  height: 435px;
+}
+/* line 290, ../scss/com/_index.scss */
+.cp-dreamWall .po-vote .count {
+  height: 108px;
+}
+/* line 295, ../scss/com/_index.scss */
+.cp-dreamWall .area-btn {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+/* line 301, ../scss/com/_index.scss */
+.cp-dreamWall .area-btn a {
+  color: #ffb300;
+  font-size: 1.4rem;
+  border: 1px solid #ffb300;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: .5rem 1.5rem;
+  display: inline-block;
+  background: #ffffff;
+}
+/* line 311, ../scss/com/_index.scss */
+.cp-dreamWall .area-btn a:hover {
+  border: 1px solid #e89208;
+  color: #e89208;
+}
+/* line 317, ../scss/com/_index.scss */
+.cp-dreamWall .post-note {
+  font-size: 1.5rem;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 5rem 0 3rem;
+  line-height: 3rem;
+}
+/* line 325, ../scss/com/_index.scss */
+.cp-dreamWall .post-note .btn-yel {
+  margin-top: 1rem;
+}
+
+/* line 331, ../scss/com/_index.scss */
+.cp-explain {
+  text-align: center;
+  background: url(../img/com/menu_bg.jpg) repeat-x;
+  float: left;
+  width: 100%;
+  height: 292px;
+  padding: 59px 0;
+}
+/* line 340, ../scss/com/_index.scss */
+.cp-explain a {
+  position: relative;
+  display: inline-block;
+  margin: 0 94px;
+  width: 131px;
+  height: 131px;
+  background: url(../img/com/btn_rule.png) no-repeat;
+}
+/* line 348, ../scss/com/_index.scss */
+.cp-explain a p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: -40px;
+}
+/* line 358, ../scss/com/_index.scss */
+.cp-explain a em {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ff6d00;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 371, ../scss/com/_index.scss */
+.cp-explain a:hover em {
+  display: block;
+}
+/* line 376, ../scss/com/_index.scss */
+.cp-explain .btn_case {
+  background: url(../img/com/btn_case.png) no-repeat;
+}
+/* line 379, ../scss/com/_index.scss */
+.cp-explain .btn_sponsor {
+  background: url(../img/com/btn_sponsor.png) no-repeat;
+}
+
+/* res 解析度版型修正
+-----------------------------------------------------------------*/
+@media (min-width: 0px) and (max-width: 1023px) {
+  /* line 387, ../scss/com/_index.scss */
+  html, body {
+    font-size: 11px;
+  }
+
+  /* line 391, ../scss/com/_index.scss */
+  .fa-com {
+    width: 635px;
+  }
+
+  /* line 396, ../scss/com/_index.scss */
+  header .logo {
+    padding: 1.3rem 0;
+    margin-right: 1rem;
+  }
+  /* line 401, ../scss/com/_index.scss */
+  header .label a {
+    padding: 0 .6rem;
+  }
+  /* line 404, ../scss/com/_index.scss */
+  header .label .current {
+    line-height: 4.45rem;
+  }
+  /* line 409, ../scss/com/_index.scss */
+  header .search input {
+    width: 6rem;
+  }
+  /* line 414, ../scss/com/_index.scss */
+  header .navSelf .btn-yel {
+    padding: 0 1rem;
+  }
+  /* line 417, ../scss/com/_index.scss */
+  header .navSelf .login {
+    margin: 0 0 0 1rem;
+  }
+  /* line 420, ../scss/com/_index.scss */
+  header .navSelf .btn-fb {
+    display: none;
+  }
+
+  /* line 426, ../scss/com/_index.scss */
+  .cp-mainBanner {
+    height: 237px;
+  }
+  /* line 429, ../scss/com/_index.scss */
+  .cp-mainBanner article {
+    width: 221px;
+    padding: 20px 30px 0 20px;
+  }
+  /* line 433, ../scss/com/_index.scss */
+  .cp-mainBanner .photo {
+    width: 414px;
+  }
+
+  /* line 438, ../scss/com/_index.scss */
+  .cp-dreamWall {
+    width: 670px;
+  }
+  /* line 441, ../scss/com/_index.scss */
+  .cp-dreamWall .post {
+    height: 438px;
+  }
+  /* line 446, ../scss/com/_index.scss */
+  .cp-dreamWall .post .article p {
+    margin: 0;
+  }
+  /* line 450, ../scss/com/_index.scss */
+  .cp-dreamWall .post .article .tit {
+    font-size: 1.3rem;
+  }
+  /* line 456, ../scss/com/_index.scss */
+  .cp-dreamWall .po-vote {
+    height: 428px;
+  }
+  /* line 459, ../scss/com/_index.scss */
+  .cp-dreamWall .po-vote .count {
+    height: 101px;
+  }
+
+  /* line 466, ../scss/com/_index.scss */
+  .cp-explain a {
+    margin: 0 39px;
+  }
+}
+@media (min-width: 1510px) and (max-width: 1679px) {
+  /* line 473, ../scss/com/_index.scss */
+  .fa-com {
+    width: 1305px;
+  }
+
+  /* line 476, ../scss/com/_index.scss */
+  .cp-mainBanner {
+    height: 487px;
+  }
+  /* line 479, ../scss/com/_index.scss */
+  .cp-mainBanner article {
+    width: 458px;
+    padding: 140px 88px 0 50px;
+  }
+  /* line 483, ../scss/com/_index.scss */
+  .cp-mainBanner .photo {
+    width: 847px;
+  }
+
+  /* line 488, ../scss/com/_index.scss */
+  .cp-dreamWall {
+    width: 1340px;
+  }
+}
+@media (min-width: 1680px) and (max-width: 1920px) {
+  /* line 494, ../scss/com/_index.scss */
+  html, body {
+    font-size: 15px;
+  }
+
+  /* line 497, ../scss/com/_index.scss */
+  .fa-com {
+    width: 1385px;
+  }
+
+  /* line 501, ../scss/com/_index.scss */
+  .cp-mainBanner {
+    height: 517px;
+  }
+  /* line 504, ../scss/com/_index.scss */
+  .cp-mainBanner article {
+    width: 485px;
+    padding: 140px 88px 0 50px;
+  }
+  /* line 508, ../scss/com/_index.scss */
+  .cp-mainBanner article p {
+    line-height: 1.6rem;
+  }
+  /* line 512, ../scss/com/_index.scss */
+  .cp-mainBanner .photo {
+    width: 900px;
+  }
+
+  /* line 517, ../scss/com/_index.scss */
+  .cp-dreamWall {
+    width: 1420px;
+  }
+  /* line 520, ../scss/com/_index.scss */
+  .cp-dreamWall .post {
+    width: 320px;
+    height: 475px;
+  }
+  /* line 524, ../scss/com/_index.scss */
+  .cp-dreamWall .post .photo {
+    height: 245px;
+  }
+  /* line 529, ../scss/com/_index.scss */
+  .cp-dreamWall .post .article .tit {
+    height: 60px;
+  }
+  /* line 535, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {
+    margin: 10px 16px 7px 16px;
+  }
+  /* line 538, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .funds span {
+    margin-top: 23px;
+  }
+  /* line 542, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .vote span {
+    margin-top: 30px;
+  }
+  /* line 545, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .vote .circle-info-half {
+    margin-top: 32px;
+  }
+  /* line 549, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .btn {
+    width: 200px;
+  }
+  /* line 554, ../scss/com/_index.scss */
+  .cp-dreamWall .po-vote {
+    height: 464px;
+  }
+  /* line 557, ../scss/com/_index.scss */
+  .cp-dreamWall .po-vote .count {
+    height: 108px;
+  }
+}
+@media screen and (min-width: 1921px) {
+  /* line 565, ../scss/com/_index.scss */
+  html, body {
+    font-size: 17px;
+  }
+
+  /* line 568, ../scss/com/_index.scss */
+  .fa-com {
+    width: 1465px;
+  }
+
+  /* line 572, ../scss/com/_index.scss */
+  .cp-mainBanner {
+    height: 517px;
+  }
+  /* line 575, ../scss/com/_index.scss */
+  .cp-mainBanner article {
+    width: 485px;
+    padding: 110px 88px 0 50px;
+  }
+  /* line 579, ../scss/com/_index.scss */
+  .cp-mainBanner article p {
+    line-height: 1.6rem;
+  }
+  /* line 583, ../scss/com/_index.scss */
+  .cp-mainBanner .photo {
+    width: 900px;
+  }
+
+  /* line 588, ../scss/com/_index.scss */
+  .cp-dreamWall {
+    width: 1500px;
+  }
+  /* line 591, ../scss/com/_index.scss */
+  .cp-dreamWall .post {
+    width: 340px;
+    height: 500px;
+  }
+  /* line 595, ../scss/com/_index.scss */
+  .cp-dreamWall .post .photo {
+    height: 260px;
+  }
+  /* line 599, ../scss/com/_index.scss */
+  .cp-dreamWall .post .article {
+    margin: 12px 16px 10px;
+  }
+  /* line 602, ../scss/com/_index.scss */
+  .cp-dreamWall .post .article .tit {
+    line-height: 1.9rem;
+    height: 70px;
+  }
+  /* line 609, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .funds, .cp-dreamWall .post .count .helper, .cp-dreamWall .post .count .supplies {
+    margin: 10px 19px 7px 20px;
+  }
+  /* line 612, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .funds p, .cp-dreamWall .post .count .helper p, .cp-dreamWall .post .count .supplies p {
+    font-size: .8rem;
+    bottom: -24px;
+  }
+  /* line 617, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .funds span {
+    margin-top: 22px;
+  }
+  /* line 621, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .vote span {
+    margin-top: 30px;
+  }
+  /* line 624, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .vote .circle-info-half {
+    margin-top: 32px;
+  }
+  /* line 628, ../scss/com/_index.scss */
+  .cp-dreamWall .post .count .btn {
+    width: 220px;
+  }
+  /* line 633, ../scss/com/_index.scss */
+  .cp-dreamWall .po-vote {
+    height: 490px;
+  }
+  /* line 636, ../scss/com/_index.scss */
+  .cp-dreamWall .po-vote .count {
+    height: 108px;
+  }
+}
