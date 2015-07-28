@@ -24,7 +24,7 @@ var FaCom = React.createClass({
 
   render: function() {
    	return (
-      <div className="fa-content">
+      <div className="fa-com">
         <CpMenuCategory />
         <CpDreamWall />
       </div>

@@ -18673,7 +18673,7 @@ webpackJsonp([0,1],[
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      { className: "fa-content" },
+	      { className: "fa-com" },
 	      React.createElement(CpMenuCategory, null),
 	      React.createElement(CpDreamWall, null)
 	    );
