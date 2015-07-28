@@ -28,7 +28,7 @@ module.exports = {
   },
   resolve: {
     // you can now require('fileName') instead of require('file.coffee') or require('file.js')...etc.
-    extensions: ['', '.js', '.json', '.coffee'] 
+    extensions: ['.js', '.json', '.coffee'] 
   },
   plugins: [commonsPlugin]
 };
