@@ -18607,85 +18607,42 @@ webpackJsonp([0,1],[
 	*/
 	'use strict';
 
-	var assign = __webpack_require__(163);
-
-	'use strict';
-
-	var AppDispatcher = __webpack_require__(164);
-	var GeneralStore = __webpack_require__(168);
+	var AppDispatcher = __webpack_require__(163);
+	var GeneralStore = __webpack_require__(167);
+	var assign = __webpack_require__(169);
 
 	var BannerStore = assign({}, GeneralStore, {
 		getFreshData: function getFreshData() {
 			var initialData = this.getInitialData('MainBannerModel');
-			initialData.data.map(function (singleData) {
-				if (singleData.id == '1') {
-					singleData.show = 'true';
-				} else {
-					singleData.show = 'false';
-				}
-			});
+			if (initialData) {
+				initialData.data.map(function (singleData) {
+					if (singleData.id == '1') {
+						singleData.show = 'true';
+					} else {
+						singleData.show = 'false';
+					}
+				});
+			}
 
 			return initialData;
 		}
 	});
 
-	AppDispatcher.register(function (payload) {
-		switch (payload.eventName) {
+	/*AppDispatcher.register( function( payload ) {
+	    switch(payload.eventName) {
 			case 'bannerAdd':
-				BannerStore.addContent(payload.newItem.item);
-
-				//trigger view update after model is updated
-				BannerStore.emitChange();
-				break;
-		}
-	});
+			  BannerStore.addContent(payload.newItem.item);
+			  
+			  //trigger view update after model is updated
+			  BannerStore.emitChange();
+			  break;
+	    }
+	}); */
 
 	module.exports = BannerStore;
 
 /***/ },
 /* 163 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	function ToObject(val) {
-		if (val == null) {
-			throw new TypeError('Object.assign cannot be called with null or undefined');
-		}
-
-		return Object(val);
-	}
-
-	module.exports = Object.assign || function (target, source) {
-		var pendingException;
-		var from;
-		var keys;
-		var to = ToObject(target);
-
-		for (var s = 1; s < arguments.length; s++) {
-			from = arguments[s];
-			keys = Object.keys(Object(from));
-
-			for (var i = 0; i < keys.length; i++) {
-				try {
-					to[keys[i]] = from[keys[i]];
-				} catch (err) {
-					if (pendingException === undefined) {
-						pendingException = err;
-					}
-				}
-			}
-		}
-
-		if (pendingException) {
-			throw pendingException;
-		}
-
-		return to;
-	};
-
-/***/ },
-/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18694,12 +18651,12 @@ webpackJsonp([0,1],[
 
 	'use strict';
 
-	var Dispatcher = __webpack_require__(165).Dispatcher;
+	var Dispatcher = __webpack_require__(164).Dispatcher;
 
 	module.exports = new Dispatcher();
 
 /***/ },
-/* 165 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18713,10 +18670,10 @@ webpackJsonp([0,1],[
 
 	'use strict';
 
-	module.exports.Dispatcher = __webpack_require__(166);
+	module.exports.Dispatcher = __webpack_require__(165);
 
 /***/ },
-/* 166 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -18733,7 +18690,7 @@ webpackJsonp([0,1],[
 
 	"use strict";
 
-	var invariant = __webpack_require__(167);
+	var invariant = __webpack_require__(166);
 
 	var _lastID = 1;
 	var _prefix = 'ID_';
@@ -18951,7 +18908,7 @@ webpackJsonp([0,1],[
 	module.exports = Dispatcher;
 
 /***/ },
-/* 167 */
+/* 166 */
 /***/ function(module, exports) {
 
 	/**
@@ -19005,7 +18962,7 @@ webpackJsonp([0,1],[
 	module.exports = invariant;
 
 /***/ },
-/* 168 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19013,8 +18970,8 @@ webpackJsonp([0,1],[
 	*/
 	'use strict';
 
-	var EventEmitter = __webpack_require__(169).EventEmitter;
-	var assign = __webpack_require__(163);
+	var EventEmitter = __webpack_require__(168).EventEmitter;
+	var assign = __webpack_require__(169);
 
 	var MainBannerModel = {
 		data: [{ pic: "../img/fake/mainBanner_01.jpg", url: "#", id: "1" }, { pic: "../img/fake/mainBanner_02.jpg", url: "#", id: "2" }, { pic: "../img/fake/mainBanner_03.jpg", url: "#", id: "3" }]
@@ -19041,7 +18998,7 @@ webpackJsonp([0,1],[
 	module.exports = GeneralStore;
 
 /***/ },
-/* 169 */
+/* 168 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -19306,6 +19263,48 @@ webpackJsonp([0,1],[
 	function isUndefined(arg) {
 	  return arg === void 0;
 	}
+
+/***/ },
+/* 169 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	function ToObject(val) {
+		if (val == null) {
+			throw new TypeError('Object.assign cannot be called with null or undefined');
+		}
+
+		return Object(val);
+	}
+
+	module.exports = Object.assign || function (target, source) {
+		var pendingException;
+		var from;
+		var keys;
+		var to = ToObject(target);
+
+		for (var s = 1; s < arguments.length; s++) {
+			from = arguments[s];
+			keys = Object.keys(Object(from));
+
+			for (var i = 0; i < keys.length; i++) {
+				try {
+					to[keys[i]] = from[keys[i]];
+				} catch (err) {
+					if (pendingException === undefined) {
+						pendingException = err;
+					}
+				}
+			}
+		}
+
+		if (pendingException) {
+			throw pendingException;
+		}
+
+		return to;
+	};
 
 /***/ },
 /* 170 */
