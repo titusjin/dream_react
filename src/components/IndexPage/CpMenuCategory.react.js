@@ -19,7 +19,13 @@ var CpMenuCategory = React.createClass({
 			    </ul>
 			</a>
 			<div className="area-btn">
-			    <a href="#">即將到期</a><span>|</span><a href="#" className="current">最新</a><span>|</span><a href="#">熱門</a><span>|</span><a href="#">已結束</a>
+			    <a href="#">即將到期</a>
+			    <span>|</span>
+			    <a href="#" className="current">最新</a>
+			    <span>|</span>
+			    <a href="#">熱門</a>
+			    <span>|</span>
+			    <a href="#">已結束</a>
 			</div>
 		</div>
 		);

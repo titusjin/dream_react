@@ -26,7 +26,11 @@ module.exports = {
       // {test: /\.jpg$/, loader: "url-loader?limit=8192"},
 
       // instead of url-loader we can simply use file-loader
-      {test: /\.(png|jpg)$/, loader: "file?name=images/[hash].[ext]"}
+      {test: /\.(png|jpg)$/, loader: "file?name=images/[hash].[ext]"},
+      {test: /\.ttf($|\?)/, loader: "file?name=images/[hash].[ext]"},
+      {test: /\.eot($|\?)/, loader: "file?name=images/[hash].[ext]"},
+      {test: /\.woff($|\?)/, loader: "file?name=images/[hash].[ext]"},
+      {test: /\.svg($|\?)/, loader: "file?name=images/[hash].[ext]"}
     ]
   },
   resolve: {
