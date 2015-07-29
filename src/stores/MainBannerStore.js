@@ -8,18 +8,24 @@ var assign = require('object-assign');
 var AppDispatcher = require('../commons/dispatcher/AppDispatcher');
 var GeneralStore = require('./GeneralStore');
 
-var model = [
-		{pic:"../img/fake/mainBanner_01.jpg",url:"#"},
-		{pic:"../img/fake/mainBanner_02.jpg",url:"#"},
-		{pic:"../img/fake/mainBanner_03.jpg",url:"#"}
-];
 
 var BannerStore = assign({},GeneralStore,{
-	
+	getFreshData : function(){
+		var initialData = this.getInitialData('MainBannerModel');
+		initialData.data.map(function(singleData){
+			if(singleData.id == '1'){
+				singleData.show = 'true';
+			}else{
+				singleData.show = 'false';
+			}
+		});
+
+		return initialData;
+	}
 });
 
 AppDispatcher.register( function( payload ) {
-    switch( payload.eventName ) {
+    switch(payload.eventName) {
 		case 'bannerAdd':
 		  BannerStore.addContent(payload.newItem.item);
 		  

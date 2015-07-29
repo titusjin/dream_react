@@ -18509,7 +18509,7 @@ webpackJsonp([0,1],[
 		displayName: 'MainBanner',
 
 		getInitialState: function getInitialState() {
-			return MainBannerStore.getInitialData('MainBannerModel');
+			return MainBannerStore.getFreshData();
 		},
 
 		componentDidMount: function componentDidMount() {},
@@ -18521,19 +18521,25 @@ webpackJsonp([0,1],[
 		handleClick: function handleClick(e) {
 			e.preventDefault();
 			var triggerNode = $(e.target);
-			var currentBanner = $("#MainBanner,p.area-page,a.current");
-
-			console.log(triggerNode.attr('class'));
-			console.log(currentBanner.attr('class'));
+			var currentBanner = $("#MainBanner").find('p.area-page').find('a.current');
 
 			if (triggerNode.attr('class') && triggerNode.attr('class').indexOf('current') != -1) {
 				return;
-			} else {}
+			} else {
+				// change the classNmae of a element
+				triggerNode.addClass('current');
+				currentBanner.removeClass('current');
+
+				this.state.data[parseInt(triggerNode.attr('data-ref'), 10)].show = 'true';
+				this.state.data[parseInt(currentBanner.attr('data-ref'), 10)].show = 'false';
+
+				this.setState(this.state.data);
+			}
 		},
 
 		render: function render() {
 			var dreamPhotoNodes = this.state.data.map(function (src) {
-				if (src.id == "1") {
+				if (src.show == "true") {
 					return React.createElement(
 						'div',
 						{ className: "photo", key: src.id },
@@ -18579,9 +18585,9 @@ webpackJsonp([0,1],[
 						React.createElement(
 							'p',
 							{ className: "area-page" },
-							React.createElement('a', { className: "current", onClick: this.handleClick, ref: "bannerPic1" }),
-							React.createElement('a', { onClick: this.handleClick, ref: "bannerPic2" }),
-							React.createElement('a', { onClick: this.handleClick, ref: "bannerPic3" })
+							React.createElement('a', { className: "current", onClick: this.handleClick, 'data-ref': "0" }),
+							React.createElement('a', { onClick: this.handleClick, 'data-ref': "1" }),
+							React.createElement('a', { onClick: this.handleClick, 'data-ref': "2" })
 						)
 					),
 					dreamPhotoNodes
@@ -18608,19 +18614,30 @@ webpackJsonp([0,1],[
 	var AppDispatcher = __webpack_require__(164);
 	var GeneralStore = __webpack_require__(168);
 
-	var model = [{ pic: "../img/fake/mainBanner_01.jpg", url: "#" }, { pic: "../img/fake/mainBanner_02.jpg", url: "#" }, { pic: "../img/fake/mainBanner_03.jpg", url: "#" }];
+	var BannerStore = assign({}, GeneralStore, {
+		getFreshData: function getFreshData() {
+			var initialData = this.getInitialData('MainBannerModel');
+			initialData.data.map(function (singleData) {
+				if (singleData.id == '1') {
+					singleData.show = 'true';
+				} else {
+					singleData.show = 'false';
+				}
+			});
 
-	var BannerStore = assign({}, GeneralStore, {});
+			return initialData;
+		}
+	});
 
 	AppDispatcher.register(function (payload) {
-			switch (payload.eventName) {
-					case 'bannerAdd':
-							BannerStore.addContent(payload.newItem.item);
+		switch (payload.eventName) {
+			case 'bannerAdd':
+				BannerStore.addContent(payload.newItem.item);
 
-							//trigger view update after model is updated
-							BannerStore.emitChange();
-							break;
-			}
+				//trigger view update after model is updated
+				BannerStore.emitChange();
+				break;
+		}
 	});
 
 	module.exports = BannerStore;
@@ -19013,6 +19030,7 @@ webpackJsonp([0,1],[
 		},
 		fetchData: function fetchData(sourceURL) {
 			if (sourceURL) {
+				// put jquery ajax or any other lib u like to use for geting data here.
 				console.log($);
 			} else {
 				return { "errorMessage": "sourceURL NOT valid" };

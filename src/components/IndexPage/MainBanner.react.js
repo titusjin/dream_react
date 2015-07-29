@@ -6,7 +6,7 @@ var MainBannerStore = require('../../stores/MainBannerStore');
 
 var MainBanner = React.createClass({
 	getInitialState: function() {
-    	return MainBannerStore.getInitialData('MainBannerModel');
+    	return MainBannerStore.getFreshData();
   	},
 	
 	componentDidMount: function() {
@@ -21,22 +21,25 @@ var MainBanner = React.createClass({
 	handleClick : function(e){
 		e.preventDefault();
 		var triggerNode = $(e.target);
-		var currentBanner = $("#MainBanner,p.area-page,a.current");
+		var currentBanner = $("#MainBanner").find('p.area-page').find('a.current');
 
 		if(triggerNode.attr('class') && triggerNode.attr('class').indexOf('current') != -1){
 			return;
 		}else{
-			// trigger link elemlent add current 
+			// change the classNmae of a element
 			triggerNode.addClass('current');
 			currentBanner.removeClass('current');
 
-			currentBanner.show();
+			this.state.data[parseInt(triggerNode.attr('data-ref'),10)].show = 'true';
+			this.state.data[parseInt(currentBanner.attr('data-ref'),10)].show = 'false';
+
+			this.setState(this.state.data);
 		}
 	},
 
 	render: function(){
 		var dreamPhotoNodes = this.state.data.map(function (src) {
-			if(src.id == "1"){
+			if(src.show == "true"){
 				return (
       				<div className="photo" key={src.id}>
         				<img src={src.pic} href={src.url} />
@@ -61,9 +64,9 @@ var MainBanner = React.createClass({
                         	<a className="btn-yel" href="#">投票支持</a>
                         </p>
                         <p className="area-page">
-                        	<a className="current" onClick={this.handleClick} ref="bannerPic1"></a>
-                        	<a onClick={this.handleClick} ref="bannerPic2"></a>
-                        	<a onClick={this.handleClick} ref="bannerPic3"></a>
+                        	<a className="current" onClick={this.handleClick} data-ref="0"></a>
+                        	<a onClick={this.handleClick} data-ref="1"></a>
+                        	<a onClick={this.handleClick} data-ref="2"></a>
                         </p>
                     </article>
                     {dreamPhotoNodes}
