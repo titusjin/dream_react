@@ -23,16 +23,14 @@ var MainBanner = React.createClass({
 		var triggerNode = $(e.target);
 		var currentBanner = $("#MainBanner,p.area-page,a.current");
 
-		console.log(triggerNode.attr('class'));
-		console.log(currentBanner.attr('class'));
-
 		if(triggerNode.attr('class') && triggerNode.attr('class').indexOf('current') != -1){
 			return;
 		}else{
+			// trigger link elemlent add current 
 			triggerNode.addClass('current');
 			currentBanner.removeClass('current');
-			
-			currentBanner.
+
+			currentBanner.show();
 		}
 	},
 

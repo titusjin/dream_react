@@ -24,6 +24,7 @@ var GeneralStore =assign({},EventEmitter.prototype,{
 	},
 	fetchData  : function(sourceURL){
 		if(sourceURL){
+			// put jquery ajax or any other lib u like to use for geting data here.
 			console.log($);
 		}else{
 			return {"errorMessage":"sourceURL NOT valid"};
