@@ -6,13 +6,12 @@ var React = require('react');
 var UniversalHeader = require('../HeaderPage/UniversalHeader.react');
 var UniversalFooter = require('../FooterPage/UniversalFooter.react');
 
-//var FaContent = require('./FaContent.react');
-var CpExplain = require('./CpExplain.react');
 var FaContent = require('./FaContent.react');
+var CpExplain = require('./CpExplain.react');
 
 var IndexPageContainer = React.createClass({
   getInitialState: function() {
-        return {};
+    return {};
   },
   
   componentDidMount: function() {
@@ -22,7 +21,6 @@ var IndexPageContainer = React.createClass({
   },
   
   _onChange: function() {
-    //this.setState(getGridContentState());
   },
 
   render: function() {

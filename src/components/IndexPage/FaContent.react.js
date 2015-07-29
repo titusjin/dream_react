@@ -3,7 +3,7 @@
 */
 var React = require('react');
 
-var CpmainBanner = require('./CpmainBanner.react');
+var MainBanner = require('./MainBanner.react');
 var FaCom = require('./FaCom.react');
 
 var FaContent = React.createClass({
@@ -15,17 +15,15 @@ var FaContent = React.createClass({
   },
 
   componentWillUnmount: function() {
-    	
   },
 	
 	_onChange: function() {
-    	//this.setState(getGridContentState());
   },
 
   render: function() {
    	return (
      	<div className="fa-content">
-          <CpmainBanner />
+          <MainBanner />
           <FaCom />
       </div>
    	);
