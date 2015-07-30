@@ -15,7 +15,7 @@ var BannerStore = assign({},GeneralStore,{
 				if(singleData.id == '1'){
 					singleData.show = 'true';
 				}else{
-					singleData.show = 'false';
+					singleData.show = 'true';
 				}
 			});
 		}

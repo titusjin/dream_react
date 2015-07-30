@@ -9,7 +9,6 @@ require('../css/common.css');
 require('../css/iconfont.css');
 require('../css/jquery.circliful.css');
 
-
 React.render(
     <IndexPageContainer />,
     document.getElementsByTagName('body')[0]

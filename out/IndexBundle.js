@@ -18505,6 +18505,19 @@ webpackJsonp([0,1],[
 	var React = __webpack_require__(1);
 	var MainBannerStore = __webpack_require__(162);
 
+	var MainBannerWrapperStyle = {
+		position: 'relative',
+		width: '900',
+		height: '514',
+		margin: '0 auto',
+		overflow: 'hidden'
+	};
+	var MainbannerPicContainerStyle = {
+		position: 'absolute',
+		width: '100%',
+		height: '100%'
+	};
+
 	var MainBanner = React.createClass({
 		displayName: 'MainBanner',
 
@@ -18512,7 +18525,28 @@ webpackJsonp([0,1],[
 			return MainBannerStore.getFreshData();
 		},
 
-		componentDidMount: function componentDidMount() {},
+		componentDidMount: function componentDidMount() {
+			var firstval = 0;
+
+			function Carousel() {
+				firstval += 10;
+				parent = document.getElementById('MainbannerPicContainer');
+				parent.style.left = "-" + firstval + "px";
+
+				if (!(firstval % 900)) {
+					setTimeout(Carousel, 3000);
+					firstval = 0;
+
+					var firstChild = parent.firstElementChild;
+					parent.appendChild(firstChild);
+					parent.style.left = 0;
+
+					return;
+				}
+				setTimeout(Carousel, 10);
+			}
+			Carousel();
+		},
 
 		componentWillUnmount: function componentWillUnmount() {},
 
@@ -18530,9 +18564,11 @@ webpackJsonp([0,1],[
 				triggerNode.addClass('current');
 				currentBanner.removeClass('current');
 
+				// chaneg the data property 'show'
 				this.state.data[parseInt(triggerNode.attr('data-ref'), 10)].show = 'true';
 				this.state.data[parseInt(currentBanner.attr('data-ref'), 10)].show = 'false';
 
+				// update the state and trigger render
 				this.setState(this.state.data);
 			}
 		},
@@ -18590,7 +18626,15 @@ webpackJsonp([0,1],[
 							React.createElement('a', { onClick: this.handleClick, 'data-ref': "2" })
 						)
 					),
-					dreamPhotoNodes
+					React.createElement(
+						'div',
+						{ id: "MainBannerWrapper", style: MainBannerWrapperStyle },
+						React.createElement(
+							'div',
+							{ id: "MainbannerPicContainer", style: MainbannerPicContainerStyle },
+							dreamPhotoNodes
+						)
+					)
 				)
 			);
 		}
@@ -18619,7 +18663,7 @@ webpackJsonp([0,1],[
 					if (singleData.id == '1') {
 						singleData.show = 'true';
 					} else {
-						singleData.show = 'false';
+						singleData.show = 'true';
 					}
 				});
 			}
