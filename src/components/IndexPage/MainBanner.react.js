@@ -5,16 +5,15 @@ var React = require('react');
 var MainBannerStore = require('../../stores/MainBannerStore');
 
 var MainBannerWrapperStyle = {
-	position: 'relative',
+	//position: 'relative',
 	width: '900',
 	height: '514',
 	margin: '0 auto',
 	overflow: 'hidden'
 };
 var MainbannerPicContainerStyle = {
-	position: 'absolute',
-	width: '100%',
-    height: '100%'
+	overflow: 'hideen',
+    float: 'left'
 }
 
 
@@ -32,7 +31,7 @@ var MainBanner = React.createClass({
 		    parent.style.left = "-" + firstval + "px";
 		    
 		    if (!(firstval % 900)) {
-		        setTimeout(Carousel, 3000);
+		        setTimeout(Carousel, 1500);
 		        firstval = 0;
 		        
 		        var firstChild = parent.firstElementChild;
@@ -41,7 +40,7 @@ var MainBanner = React.createClass({
 		        
 		        return;
 		    }
-	    	setTimeout(Carousel, 10);
+	    	setTimeout(Carousel, 80);
 		}
 		Carousel();
 	},
@@ -105,7 +104,7 @@ var MainBanner = React.createClass({
                         	<a onClick={this.handleClick} data-ref="2"></a>
                         </p>
                     </article>
-                    <div id="MainBannerWrapper" style={MainBannerWrapperStyle}>
+                   	<div id="MainBannerWrapper" style={MainBannerWrapperStyle}>
 	                    <div id="MainbannerPicContainer" style={MainbannerPicContainerStyle}>
 	                    	{dreamPhotoNodes}
 	                   	</div>
