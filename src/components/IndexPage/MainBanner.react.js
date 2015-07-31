@@ -4,16 +4,26 @@
 var React = require('react');
 var MainBannerStore = require('../../stores/MainBannerStore');
 
-var MainBannerWrapperStyle = {
-	//position: 'relative',
-	width: '900',
-	height: '514',
-	margin: '0 auto',
-	overflow: 'hidden'
-};
-var MainbannerPicContainerStyle = {
-	overflow: 'hideen',
-    float: 'left'
+var stopCaoursel;
+var firstval = 0;
+var Carousel = function() {
+    firstval += 20;
+    parent = document.getElementById('MainbannerPicContainer');
+    parent.style.left = "-" + firstval + "px";
+    
+    if (!(firstval % 900)) {
+    	//this timeout value 1000 can be reduced if u want the carousel more quick
+        setTimeout(Carousel, 1000);
+
+        firstval = 0;
+        var firstChild = parent.firstElementChild;
+        parent.appendChild(firstChild);
+        parent.style.left= 0;
+        
+        return;
+    }
+
+	stopCaoursel = setTimeout(Carousel, 80);
 }
 
 
@@ -23,25 +33,6 @@ var MainBanner = React.createClass({
   	},
 	
 	componentDidMount: function() {
-		var firstval = 0;
-
-		function Carousel() {
-		    firstval += 10;
-		    parent = document.getElementById('MainbannerPicContainer');
-		    parent.style.left = "-" + firstval + "px";
-		    
-		    if (!(firstval % 900)) {
-		        setTimeout(Carousel, 1500);
-		        firstval = 0;
-		        
-		        var firstChild = parent.firstElementChild;
-		        parent.appendChild(firstChild);
-		        parent.style.left= 0;
-		        
-		        return;
-		    }
-	    	setTimeout(Carousel, 80);
-		}
 		Carousel();
 	},
 
@@ -69,6 +60,7 @@ var MainBanner = React.createClass({
 
 			// update the state and trigger render
 			this.setState(this.state.data);
+			clearTimeout(stopCaoursel);
 		}
 	},
 
@@ -104,8 +96,8 @@ var MainBanner = React.createClass({
                         	<a onClick={this.handleClick} data-ref="2"></a>
                         </p>
                     </article>
-                   	<div id="MainBannerWrapper" style={MainBannerWrapperStyle}>
-	                    <div id="MainbannerPicContainer" style={MainbannerPicContainerStyle}>
+                   	<div id="MainBannerWrapper" className="MainBannerWrapperStyle">
+	                    <div id="MainbannerPicContainer" className="MainbannerPicContainerStyle">
 	                    	{dreamPhotoNodes}
 	                   	</div>
                    	</div>

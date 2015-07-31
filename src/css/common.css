@@ -567,6 +567,21 @@ footer .copyright a:hover {
   height: auto;
 }
 
+/* For MainBanner carousel */
+  .cp-mainBanner #MainBannerWrapper{
+    width: 630px;
+    height: auto;
+    float: left;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cp-mainBanner .MainbannerPicContainerStyle{
+    width: 100%;
+    overflow: hideen;
+    float: left;
+  }
+
 /* line 77, ../scss/com/_index.scss */
 .cp-menu-category {
   font-size: 1.2rem;
@@ -942,6 +957,20 @@ footer .copyright a:hover {
     width: 414px;
   }
 
+  /* For MainBanner carousel */
+  .cp-mainBanner #MainBannerWrapper{
+    width: 414px;
+    height: 237px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cp-mainBanner .MainbannerPicContainerStyle{
+    width: 100%;
+    overflow: hideen;
+    float: left;
+  }
+
   /* line 438, ../scss/com/_index.scss */
   .cp-dreamWall {
     width: 670px;
@@ -992,6 +1021,20 @@ footer .copyright a:hover {
     width: 847px;
   }
 
+  /* For MainBanner carousel */
+  .cp-mainBanner #MainBannerWrapper{
+    width: 847px;
+    height: 487px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cp-mainBanner .MainbannerPicContainerStyle{
+    width: 100%;
+    overflow: hideen;
+    float: left;
+  }
+
   /* line 488, ../scss/com/_index.scss */
   .cp-dreamWall {
     width: 1340px;
@@ -1024,6 +1067,20 @@ footer .copyright a:hover {
   /* line 512, ../scss/com/_index.scss */
   .cp-mainBanner .photo {
     width: 900px;
+  }
+
+  /* For MainBanner carousel */
+  .cp-mainBanner #MainBannerWrapper{
+    width: 900px;
+    height: 517px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cp-mainBanner .MainbannerPicContainerStyle{
+    width: 100%;
+    overflow: hideen;
+    float: left;
   }
 
   /* line 517, ../scss/com/_index.scss */
@@ -1099,6 +1156,19 @@ footer .copyright a:hover {
   /* line 583, ../scss/com/_index.scss */
   .cp-mainBanner .photo {
     width: 900px;
+  }
+
+  /* For MainBanner carousel */
+  .cp-mainBanner .MainBannerWrapperStyle{
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .cp-mainBanner .MainbannerPicContainerStyle{
+    width: 100%;
+    overflow: hideen;
+    float: left;
   }
 
   /* line 588, ../scss/com/_index.scss */
