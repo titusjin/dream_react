@@ -24,7 +24,6 @@ var Carousel = function() {
         parent.appendChild(firstChild);
         var currentFist = parent.firstElementChild;
         currentFist.style.display = 'block';
-        console.log(currentFist.getAttribute('data-reactid'));
 
         parent.style.left= 0;
         
