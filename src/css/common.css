@@ -570,7 +570,7 @@ footer .copyright a:hover {
 /* For MainBanner carousel */
   .cp-mainBanner #MainBannerWrapper{
     width: 630px;
-    height: auto;
+    height: 100%;
     float: left;
     margin: 0 auto;
     overflow: hidden;

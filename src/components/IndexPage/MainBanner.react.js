@@ -6,6 +6,7 @@ var MainBannerStore = require('../../stores/MainBannerStore');
 
 var stopCaoursel;
 var firstval = 0;
+
 var Carousel = function() {
     firstval += 20;
     parent = document.getElementById('MainbannerPicContainer');
@@ -17,6 +18,7 @@ var Carousel = function() {
 
         firstval = 0;
         var firstChild = parent.firstElementChild;
+
         parent.appendChild(firstChild);
         parent.style.left= 0;
         
@@ -36,7 +38,8 @@ var MainBanner = React.createClass({
 		Carousel();
 	},
 
-	componentWillUnmount: function() {  	
+	componentWillUnmount: function() {  
+		clearTimeout(stopCaoursel);	
 	},
 	
 	_onChange: function() {
