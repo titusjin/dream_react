@@ -6,20 +6,26 @@ var MainBannerStore = require('../../stores/MainBannerStore');
 
 var stopCaoursel;
 var firstval = 0;
+var containterWidth;
 
 var Carousel = function() {
     firstval += 20;
     parent = document.getElementById('MainbannerPicContainer');
     parent.style.left = "-" + firstval + "px";
     
-    if (!(firstval % 900)) {
+    if (!(firstval % containterWidth)) {
     	//this timeout value 1000 can be reduced if u want the carousel more quick
-        setTimeout(Carousel, 1000);
+        setTimeout(Carousel, 2000);
 
         firstval = 0;
         var firstChild = parent.firstElementChild;
+        firstChild.style.display = 'none';
 
         parent.appendChild(firstChild);
+        var currentFist = parent.firstElementChild;
+        currentFist.style.display = 'block';
+        console.log(currentFist.getAttribute('data-reactid'));
+
         parent.style.left= 0;
         
         return;
@@ -35,6 +41,7 @@ var MainBanner = React.createClass({
   	},
 	
 	componentDidMount: function() {
+		containterWidth = document.getElementById('MainbannerPicContainer').offsetWidth;
 		Carousel();
 	},
 
@@ -63,6 +70,8 @@ var MainBanner = React.createClass({
 
 			// update the state and trigger render
 			this.setState(this.state.data);
+
+			// stop the carousel
 			clearTimeout(stopCaoursel);
 		}
 	},

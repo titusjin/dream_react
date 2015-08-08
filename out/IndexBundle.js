@@ -18507,22 +18507,26 @@ webpackJsonp([0,1],[
 
 	var stopCaoursel;
 	var firstval = 0;
+	var containterWidth;
 
 	var Carousel = function Carousel() {
 		firstval += 20;
 		parent = document.getElementById('MainbannerPicContainer');
 		parent.style.left = "-" + firstval + "px";
 
-		if (!(firstval % 900)) {
+		if (!(firstval % containterWidth)) {
 			//this timeout value 1000 can be reduced if u want the carousel more quick
-			setTimeout(Carousel, 1000);
+			setTimeout(Carousel, 2000);
 
 			firstval = 0;
 			var firstChild = parent.firstElementChild;
-
-			console.log(firstChild.getAttribute('data-reactid'));
+			firstChild.style.display = 'none';
 
 			parent.appendChild(firstChild);
+			var currentFist = parent.firstElementChild;
+			currentFist.style.display = 'block';
+			console.log(currentFist.getAttribute('data-reactid'));
+
 			parent.style.left = 0;
 
 			return;
@@ -18539,6 +18543,7 @@ webpackJsonp([0,1],[
 		},
 
 		componentDidMount: function componentDidMount() {
+			containterWidth = document.getElementById('MainbannerPicContainer').offsetWidth;
 			Carousel();
 		},
 
@@ -18566,6 +18571,8 @@ webpackJsonp([0,1],[
 
 				// update the state and trigger render
 				this.setState(this.state.data);
+
+				// stop the carousel
 				clearTimeout(stopCaoursel);
 			}
 		},
@@ -18660,7 +18667,7 @@ webpackJsonp([0,1],[
 					if (singleData.id == '1') {
 						singleData.show = 'true';
 					} else {
-						singleData.show = 'true';
+						singleData.show = 'false';
 					}
 				});
 			}
