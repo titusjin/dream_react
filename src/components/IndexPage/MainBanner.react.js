@@ -37,7 +37,7 @@ var Carousel = function() {
         var currentFist = parent.firstElementChild;
         currentFist.style.display = 'block';
 
-        // 
+        // Carousel restart
         parent.style.left= 0;
         return;
     }
@@ -91,13 +91,13 @@ var MainBanner = React.createClass({
 		var dreamPhotoNodes = this.state.data.map(function (src) {
 			if(src.show == "true"){
 				return (
-      				<div className="photo" key={src.id} data-ref={src.id}>
+      				<div className="photo" key={src.id}>
         				<img src={src.pic} href={src.url} />
         			</div>
         		)
 			}else{
 				return(
-					<div className="photo" key={src.id} style={{display: 'none'}} data-ref={src.id}> 
+					<div className="photo" key={src.id} style={{display: 'none'}}> 
         				<img src={src.pic} href={src.url} />
         			</div>
 				)

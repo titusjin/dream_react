@@ -18537,7 +18537,7 @@ webpackJsonp([0,1],[
 	    var currentFist = parent.firstElementChild;
 	    currentFist.style.display = 'block';
 
-	    //
+	    // Carousel restart
 	    parent.style.left = 0;
 	    return;
 	  }
@@ -18592,13 +18592,13 @@ webpackJsonp([0,1],[
 	      if (src.show == "true") {
 	        return React.createElement(
 	          'div',
-	          { className: 'photo', key: src.id, 'data-ref': src.id },
+	          { className: 'photo', key: src.id },
 	          React.createElement('img', { src: src.pic, href: src.url })
 	        );
 	      } else {
 	        return React.createElement(
 	          'div',
-	          { className: 'photo', key: src.id, style: { display: 'none' }, 'data-ref': src.id },
+	          { className: 'photo', key: src.id, style: { display: 'none' } },
 	          React.createElement('img', { src: src.pic, href: src.url })
 	        );
 	      }
