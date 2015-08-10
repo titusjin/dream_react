@@ -9,24 +9,36 @@ var firstval = 0;
 var containterWidth;
 
 var Carousel = function() {
+    // speed setting for carousel : by making the carousel moving to left
     firstval += 20;
     parent = document.getElementById('MainbannerPicContainer');
     parent.style.left = "-" + firstval + "px";
     
+    // Check if the carousel is done the moving
     if (!(firstval % containterWidth)) {
     	//this timeout value 1000 can be reduced if u want the carousel more quick
         setTimeout(Carousel, 2000);
-
-        firstval = 0;
+		firstval = 0;
+        
+        // Make the passing pic element not be displayed
         var firstChild = parent.firstElementChild;
         firstChild.style.display = 'none';
+        // Make the left 'a link' moving with the carousel
+        var currentBanner = $("#MainBanner").find('p.area-page').find('a.current');
+        currentBanner.removeClass('current');
+        if(currentBanner.attr('data-ref').indexOf('2') != -1){
+        	currentBanner.prev().prev().addClass('current');
+        }else{
+        	currentBanner.next().addClass('current');	
+        }
+
 
         parent.appendChild(firstChild);
         var currentFist = parent.firstElementChild;
         currentFist.style.display = 'block';
 
+        // 
         parent.style.left= 0;
-        
         return;
     }
 
@@ -45,7 +57,7 @@ var MainBanner = React.createClass({
 	},
 
 	componentWillUnmount: function() {  
-		clearTimeout(stopCaoursel);	
+		clearTimeout(stopCaoursel);
 	},
 	
 	_onChange: function() {
@@ -79,13 +91,13 @@ var MainBanner = React.createClass({
 		var dreamPhotoNodes = this.state.data.map(function (src) {
 			if(src.show == "true"){
 				return (
-      				<div className="photo" key={src.id}>
+      				<div className="photo" key={src.id} data-ref={src.id}>
         				<img src={src.pic} href={src.url} />
         			</div>
         		)
 			}else{
 				return(
-					<div className="photo" key={src.id} style={{display: 'none'}}>
+					<div className="photo" key={src.id} style={{display: 'none'}} data-ref={src.id}> 
         				<img src={src.pic} href={src.url} />
         			</div>
 				)
