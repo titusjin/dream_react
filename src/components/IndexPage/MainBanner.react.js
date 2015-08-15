@@ -32,7 +32,6 @@ var Carousel = function() {
         	currentBanner.next().addClass('current');	
         }
 
-
         parent.appendChild(firstChild);
         var currentFist = parent.firstElementChild;
         currentFist.style.display = 'block';

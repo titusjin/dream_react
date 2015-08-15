@@ -1,7 +1,7 @@
 {
   "name": "dream_react",
   "version": "0.0.1",
-  "description": "Dream project with reactJS FE part",
+  "description": "The FE part of Dream project with reactJS ",
   "repository": "https://github.com/titusjin/dream_react.git",
   "dependencies": {
     "flux": "^2.0.1",
@@ -29,7 +29,7 @@
     "buildp": "webpack -p",
     "test": "jest"
   },
-  "author": "104 Corporation",
+  "author": "Titus Jin",
   "jest": {
     "rootDir": "./js"
   }
